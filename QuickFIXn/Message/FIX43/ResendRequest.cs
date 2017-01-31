@@ -1,12 +1,10 @@
 // This is a generated file.  Don't edit it directly!
 
 using QuickFix.Fields;
-namespace QuickFix
+namespace QuickFix.FIX43
 {
-    namespace FIX43 
+    public class ResendRequest : Message
     {
-        public class ResendRequest : Message
-        {
             public const string MsgType = "2";
 
             public ResendRequest() : base()
@@ -27,7 +25,7 @@ namespace QuickFix
             { 
                 get 
                 {
-                    QuickFix.Fields.BeginSeqNo val = new QuickFix.Fields.BeginSeqNo();
+                    var val = new QuickFix.Fields.BeginSeqNo();
                     GetField(val);
                     return val;
                 }
@@ -36,7 +34,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.BeginSeqNo val) 
             { 
-                this.BeginSeqNo = val;
+                BeginSeqNo = val;
             }
             
             public QuickFix.Fields.BeginSeqNo Get(QuickFix.Fields.BeginSeqNo val) 
@@ -52,13 +50,14 @@ namespace QuickFix
             
             public bool IsSetBeginSeqNo() 
             { 
-                return IsSetField(Tags.BeginSeqNo);
+                return IsSetField(QuickFix.Fields.Tags.BeginSeqNo);
             }
+            
             public QuickFix.Fields.EndSeqNo EndSeqNo
             { 
                 get 
                 {
-                    QuickFix.Fields.EndSeqNo val = new QuickFix.Fields.EndSeqNo();
+                    var val = new QuickFix.Fields.EndSeqNo();
                     GetField(val);
                     return val;
                 }
@@ -67,7 +66,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.EndSeqNo val) 
             { 
-                this.EndSeqNo = val;
+                EndSeqNo = val;
             }
             
             public QuickFix.Fields.EndSeqNo Get(QuickFix.Fields.EndSeqNo val) 
@@ -83,9 +82,9 @@ namespace QuickFix
             
             public bool IsSetEndSeqNo() 
             { 
-                return IsSetField(Tags.EndSeqNo);
+                return IsSetField(QuickFix.Fields.Tags.EndSeqNo);
             }
+            
 
-        }
     }
 }

@@ -1,12 +1,10 @@
 // This is a generated file.  Don't edit it directly!
 
 using QuickFix.Fields;
-namespace QuickFix
+namespace QuickFix.FIX50SP2
 {
-    namespace FIX50SP2 
+    public class SecurityTypeRequest : Message
     {
-        public class SecurityTypeRequest : Message
-        {
             public const string MsgType = "v";
 
             public SecurityTypeRequest() : base()
@@ -25,7 +23,7 @@ namespace QuickFix
             { 
                 get 
                 {
-                    QuickFix.Fields.SecurityReqID val = new QuickFix.Fields.SecurityReqID();
+                    var val = new QuickFix.Fields.SecurityReqID();
                     GetField(val);
                     return val;
                 }
@@ -34,7 +32,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.SecurityReqID val) 
             { 
-                this.SecurityReqID = val;
+                SecurityReqID = val;
             }
             
             public QuickFix.Fields.SecurityReqID Get(QuickFix.Fields.SecurityReqID val) 
@@ -50,13 +48,14 @@ namespace QuickFix
             
             public bool IsSetSecurityReqID() 
             { 
-                return IsSetField(Tags.SecurityReqID);
+                return IsSetField(QuickFix.Fields.Tags.SecurityReqID);
             }
+            
             public QuickFix.Fields.Text Text
             { 
                 get 
                 {
-                    QuickFix.Fields.Text val = new QuickFix.Fields.Text();
+                    var val = new QuickFix.Fields.Text();
                     GetField(val);
                     return val;
                 }
@@ -65,7 +64,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.Text val) 
             { 
-                this.Text = val;
+                Text = val;
             }
             
             public QuickFix.Fields.Text Get(QuickFix.Fields.Text val) 
@@ -81,13 +80,14 @@ namespace QuickFix
             
             public bool IsSetText() 
             { 
-                return IsSetField(Tags.Text);
+                return IsSetField(QuickFix.Fields.Tags.Text);
             }
+            
             public QuickFix.Fields.EncodedTextLen EncodedTextLen
             { 
                 get 
                 {
-                    QuickFix.Fields.EncodedTextLen val = new QuickFix.Fields.EncodedTextLen();
+                    var val = new QuickFix.Fields.EncodedTextLen();
                     GetField(val);
                     return val;
                 }
@@ -96,7 +96,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.EncodedTextLen val) 
             { 
-                this.EncodedTextLen = val;
+                EncodedTextLen = val;
             }
             
             public QuickFix.Fields.EncodedTextLen Get(QuickFix.Fields.EncodedTextLen val) 
@@ -112,13 +112,14 @@ namespace QuickFix
             
             public bool IsSetEncodedTextLen() 
             { 
-                return IsSetField(Tags.EncodedTextLen);
+                return IsSetField(QuickFix.Fields.Tags.EncodedTextLen);
             }
+            
             public QuickFix.Fields.EncodedText EncodedText
             { 
                 get 
                 {
-                    QuickFix.Fields.EncodedText val = new QuickFix.Fields.EncodedText();
+                    var val = new QuickFix.Fields.EncodedText();
                     GetField(val);
                     return val;
                 }
@@ -127,7 +128,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.EncodedText val) 
             { 
-                this.EncodedText = val;
+                EncodedText = val;
             }
             
             public QuickFix.Fields.EncodedText Get(QuickFix.Fields.EncodedText val) 
@@ -143,13 +144,14 @@ namespace QuickFix
             
             public bool IsSetEncodedText() 
             { 
-                return IsSetField(Tags.EncodedText);
+                return IsSetField(QuickFix.Fields.Tags.EncodedText);
             }
+            
             public QuickFix.Fields.TradingSessionID TradingSessionID
             { 
                 get 
                 {
-                    QuickFix.Fields.TradingSessionID val = new QuickFix.Fields.TradingSessionID();
+                    var val = new QuickFix.Fields.TradingSessionID();
                     GetField(val);
                     return val;
                 }
@@ -158,7 +160,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.TradingSessionID val) 
             { 
-                this.TradingSessionID = val;
+                TradingSessionID = val;
             }
             
             public QuickFix.Fields.TradingSessionID Get(QuickFix.Fields.TradingSessionID val) 
@@ -174,13 +176,14 @@ namespace QuickFix
             
             public bool IsSetTradingSessionID() 
             { 
-                return IsSetField(Tags.TradingSessionID);
+                return IsSetField(QuickFix.Fields.Tags.TradingSessionID);
             }
+            
             public QuickFix.Fields.TradingSessionSubID TradingSessionSubID
             { 
                 get 
                 {
-                    QuickFix.Fields.TradingSessionSubID val = new QuickFix.Fields.TradingSessionSubID();
+                    var val = new QuickFix.Fields.TradingSessionSubID();
                     GetField(val);
                     return val;
                 }
@@ -189,7 +192,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.TradingSessionSubID val) 
             { 
-                this.TradingSessionSubID = val;
+                TradingSessionSubID = val;
             }
             
             public QuickFix.Fields.TradingSessionSubID Get(QuickFix.Fields.TradingSessionSubID val) 
@@ -205,13 +208,14 @@ namespace QuickFix
             
             public bool IsSetTradingSessionSubID() 
             { 
-                return IsSetField(Tags.TradingSessionSubID);
+                return IsSetField(QuickFix.Fields.Tags.TradingSessionSubID);
             }
+            
             public QuickFix.Fields.Product Product
             { 
                 get 
                 {
-                    QuickFix.Fields.Product val = new QuickFix.Fields.Product();
+                    var val = new QuickFix.Fields.Product();
                     GetField(val);
                     return val;
                 }
@@ -220,7 +224,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.Product val) 
             { 
-                this.Product = val;
+                Product = val;
             }
             
             public QuickFix.Fields.Product Get(QuickFix.Fields.Product val) 
@@ -236,13 +240,14 @@ namespace QuickFix
             
             public bool IsSetProduct() 
             { 
-                return IsSetField(Tags.Product);
+                return IsSetField(QuickFix.Fields.Tags.Product);
             }
+            
             public QuickFix.Fields.SecurityType SecurityType
             { 
                 get 
                 {
-                    QuickFix.Fields.SecurityType val = new QuickFix.Fields.SecurityType();
+                    var val = new QuickFix.Fields.SecurityType();
                     GetField(val);
                     return val;
                 }
@@ -251,7 +256,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.SecurityType val) 
             { 
-                this.SecurityType = val;
+                SecurityType = val;
             }
             
             public QuickFix.Fields.SecurityType Get(QuickFix.Fields.SecurityType val) 
@@ -267,13 +272,14 @@ namespace QuickFix
             
             public bool IsSetSecurityType() 
             { 
-                return IsSetField(Tags.SecurityType);
+                return IsSetField(QuickFix.Fields.Tags.SecurityType);
             }
+            
             public QuickFix.Fields.SecuritySubType SecuritySubType
             { 
                 get 
                 {
-                    QuickFix.Fields.SecuritySubType val = new QuickFix.Fields.SecuritySubType();
+                    var val = new QuickFix.Fields.SecuritySubType();
                     GetField(val);
                     return val;
                 }
@@ -282,7 +288,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.SecuritySubType val) 
             { 
-                this.SecuritySubType = val;
+                SecuritySubType = val;
             }
             
             public QuickFix.Fields.SecuritySubType Get(QuickFix.Fields.SecuritySubType val) 
@@ -298,13 +304,14 @@ namespace QuickFix
             
             public bool IsSetSecuritySubType() 
             { 
-                return IsSetField(Tags.SecuritySubType);
+                return IsSetField(QuickFix.Fields.Tags.SecuritySubType);
             }
+            
             public QuickFix.Fields.MarketID MarketID
             { 
                 get 
                 {
-                    QuickFix.Fields.MarketID val = new QuickFix.Fields.MarketID();
+                    var val = new QuickFix.Fields.MarketID();
                     GetField(val);
                     return val;
                 }
@@ -313,7 +320,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.MarketID val) 
             { 
-                this.MarketID = val;
+                MarketID = val;
             }
             
             public QuickFix.Fields.MarketID Get(QuickFix.Fields.MarketID val) 
@@ -329,13 +336,14 @@ namespace QuickFix
             
             public bool IsSetMarketID() 
             { 
-                return IsSetField(Tags.MarketID);
+                return IsSetField(QuickFix.Fields.Tags.MarketID);
             }
+            
             public QuickFix.Fields.MarketSegmentID MarketSegmentID
             { 
                 get 
                 {
-                    QuickFix.Fields.MarketSegmentID val = new QuickFix.Fields.MarketSegmentID();
+                    var val = new QuickFix.Fields.MarketSegmentID();
                     GetField(val);
                     return val;
                 }
@@ -344,7 +352,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.MarketSegmentID val) 
             { 
-                this.MarketSegmentID = val;
+                MarketSegmentID = val;
             }
             
             public QuickFix.Fields.MarketSegmentID Get(QuickFix.Fields.MarketSegmentID val) 
@@ -360,9 +368,9 @@ namespace QuickFix
             
             public bool IsSetMarketSegmentID() 
             { 
-                return IsSetField(Tags.MarketSegmentID);
+                return IsSetField(QuickFix.Fields.Tags.MarketSegmentID);
             }
+            
 
-        }
     }
 }

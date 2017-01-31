@@ -1,12 +1,10 @@
 // This is a generated file.  Don't edit it directly!
 
 using QuickFix.Fields;
-namespace QuickFix
+namespace QuickFix.FIX50SP2
 {
-    namespace FIX50SP2 
+    public class UserRequest : Message
     {
-        public class UserRequest : Message
-        {
             public const string MsgType = "BE";
 
             public UserRequest() : base()
@@ -29,7 +27,7 @@ namespace QuickFix
             { 
                 get 
                 {
-                    QuickFix.Fields.UserRequestID val = new QuickFix.Fields.UserRequestID();
+                    var val = new QuickFix.Fields.UserRequestID();
                     GetField(val);
                     return val;
                 }
@@ -38,7 +36,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.UserRequestID val) 
             { 
-                this.UserRequestID = val;
+                UserRequestID = val;
             }
             
             public QuickFix.Fields.UserRequestID Get(QuickFix.Fields.UserRequestID val) 
@@ -54,13 +52,14 @@ namespace QuickFix
             
             public bool IsSetUserRequestID() 
             { 
-                return IsSetField(Tags.UserRequestID);
+                return IsSetField(QuickFix.Fields.Tags.UserRequestID);
             }
+            
             public QuickFix.Fields.UserRequestType UserRequestType
             { 
                 get 
                 {
-                    QuickFix.Fields.UserRequestType val = new QuickFix.Fields.UserRequestType();
+                    var val = new QuickFix.Fields.UserRequestType();
                     GetField(val);
                     return val;
                 }
@@ -69,7 +68,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.UserRequestType val) 
             { 
-                this.UserRequestType = val;
+                UserRequestType = val;
             }
             
             public QuickFix.Fields.UserRequestType Get(QuickFix.Fields.UserRequestType val) 
@@ -85,13 +84,14 @@ namespace QuickFix
             
             public bool IsSetUserRequestType() 
             { 
-                return IsSetField(Tags.UserRequestType);
+                return IsSetField(QuickFix.Fields.Tags.UserRequestType);
             }
+            
             public QuickFix.Fields.Username Username
             { 
                 get 
                 {
-                    QuickFix.Fields.Username val = new QuickFix.Fields.Username();
+                    var val = new QuickFix.Fields.Username();
                     GetField(val);
                     return val;
                 }
@@ -100,7 +100,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.Username val) 
             { 
-                this.Username = val;
+                Username = val;
             }
             
             public QuickFix.Fields.Username Get(QuickFix.Fields.Username val) 
@@ -116,13 +116,14 @@ namespace QuickFix
             
             public bool IsSetUsername() 
             { 
-                return IsSetField(Tags.Username);
+                return IsSetField(QuickFix.Fields.Tags.Username);
             }
+            
             public QuickFix.Fields.Password Password
             { 
                 get 
                 {
-                    QuickFix.Fields.Password val = new QuickFix.Fields.Password();
+                    var val = new QuickFix.Fields.Password();
                     GetField(val);
                     return val;
                 }
@@ -131,7 +132,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.Password val) 
             { 
-                this.Password = val;
+                Password = val;
             }
             
             public QuickFix.Fields.Password Get(QuickFix.Fields.Password val) 
@@ -147,13 +148,14 @@ namespace QuickFix
             
             public bool IsSetPassword() 
             { 
-                return IsSetField(Tags.Password);
+                return IsSetField(QuickFix.Fields.Tags.Password);
             }
+            
             public QuickFix.Fields.NewPassword NewPassword
             { 
                 get 
                 {
-                    QuickFix.Fields.NewPassword val = new QuickFix.Fields.NewPassword();
+                    var val = new QuickFix.Fields.NewPassword();
                     GetField(val);
                     return val;
                 }
@@ -162,7 +164,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.NewPassword val) 
             { 
-                this.NewPassword = val;
+                NewPassword = val;
             }
             
             public QuickFix.Fields.NewPassword Get(QuickFix.Fields.NewPassword val) 
@@ -178,13 +180,14 @@ namespace QuickFix
             
             public bool IsSetNewPassword() 
             { 
-                return IsSetField(Tags.NewPassword);
+                return IsSetField(QuickFix.Fields.Tags.NewPassword);
             }
+            
             public QuickFix.Fields.RawDataLength RawDataLength
             { 
                 get 
                 {
-                    QuickFix.Fields.RawDataLength val = new QuickFix.Fields.RawDataLength();
+                    var val = new QuickFix.Fields.RawDataLength();
                     GetField(val);
                     return val;
                 }
@@ -193,7 +196,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.RawDataLength val) 
             { 
-                this.RawDataLength = val;
+                RawDataLength = val;
             }
             
             public QuickFix.Fields.RawDataLength Get(QuickFix.Fields.RawDataLength val) 
@@ -209,13 +212,14 @@ namespace QuickFix
             
             public bool IsSetRawDataLength() 
             { 
-                return IsSetField(Tags.RawDataLength);
+                return IsSetField(QuickFix.Fields.Tags.RawDataLength);
             }
+            
             public QuickFix.Fields.RawData RawData
             { 
                 get 
                 {
-                    QuickFix.Fields.RawData val = new QuickFix.Fields.RawData();
+                    var val = new QuickFix.Fields.RawData();
                     GetField(val);
                     return val;
                 }
@@ -224,7 +228,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.RawData val) 
             { 
-                this.RawData = val;
+                RawData = val;
             }
             
             public QuickFix.Fields.RawData Get(QuickFix.Fields.RawData val) 
@@ -240,13 +244,14 @@ namespace QuickFix
             
             public bool IsSetRawData() 
             { 
-                return IsSetField(Tags.RawData);
+                return IsSetField(QuickFix.Fields.Tags.RawData);
             }
+            
             public QuickFix.Fields.EncryptedPasswordMethod EncryptedPasswordMethod
             { 
                 get 
                 {
-                    QuickFix.Fields.EncryptedPasswordMethod val = new QuickFix.Fields.EncryptedPasswordMethod();
+                    var val = new QuickFix.Fields.EncryptedPasswordMethod();
                     GetField(val);
                     return val;
                 }
@@ -255,7 +260,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.EncryptedPasswordMethod val) 
             { 
-                this.EncryptedPasswordMethod = val;
+                EncryptedPasswordMethod = val;
             }
             
             public QuickFix.Fields.EncryptedPasswordMethod Get(QuickFix.Fields.EncryptedPasswordMethod val) 
@@ -271,13 +276,14 @@ namespace QuickFix
             
             public bool IsSetEncryptedPasswordMethod() 
             { 
-                return IsSetField(Tags.EncryptedPasswordMethod);
+                return IsSetField(QuickFix.Fields.Tags.EncryptedPasswordMethod);
             }
+            
             public QuickFix.Fields.EncryptedPasswordLen EncryptedPasswordLen
             { 
                 get 
                 {
-                    QuickFix.Fields.EncryptedPasswordLen val = new QuickFix.Fields.EncryptedPasswordLen();
+                    var val = new QuickFix.Fields.EncryptedPasswordLen();
                     GetField(val);
                     return val;
                 }
@@ -286,7 +292,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.EncryptedPasswordLen val) 
             { 
-                this.EncryptedPasswordLen = val;
+                EncryptedPasswordLen = val;
             }
             
             public QuickFix.Fields.EncryptedPasswordLen Get(QuickFix.Fields.EncryptedPasswordLen val) 
@@ -302,13 +308,14 @@ namespace QuickFix
             
             public bool IsSetEncryptedPasswordLen() 
             { 
-                return IsSetField(Tags.EncryptedPasswordLen);
+                return IsSetField(QuickFix.Fields.Tags.EncryptedPasswordLen);
             }
+            
             public QuickFix.Fields.EncryptedPassword EncryptedPassword
             { 
                 get 
                 {
-                    QuickFix.Fields.EncryptedPassword val = new QuickFix.Fields.EncryptedPassword();
+                    var val = new QuickFix.Fields.EncryptedPassword();
                     GetField(val);
                     return val;
                 }
@@ -317,7 +324,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.EncryptedPassword val) 
             { 
-                this.EncryptedPassword = val;
+                EncryptedPassword = val;
             }
             
             public QuickFix.Fields.EncryptedPassword Get(QuickFix.Fields.EncryptedPassword val) 
@@ -333,13 +340,14 @@ namespace QuickFix
             
             public bool IsSetEncryptedPassword() 
             { 
-                return IsSetField(Tags.EncryptedPassword);
+                return IsSetField(QuickFix.Fields.Tags.EncryptedPassword);
             }
+            
             public QuickFix.Fields.EncryptedNewPasswordLen EncryptedNewPasswordLen
             { 
                 get 
                 {
-                    QuickFix.Fields.EncryptedNewPasswordLen val = new QuickFix.Fields.EncryptedNewPasswordLen();
+                    var val = new QuickFix.Fields.EncryptedNewPasswordLen();
                     GetField(val);
                     return val;
                 }
@@ -348,7 +356,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.EncryptedNewPasswordLen val) 
             { 
-                this.EncryptedNewPasswordLen = val;
+                EncryptedNewPasswordLen = val;
             }
             
             public QuickFix.Fields.EncryptedNewPasswordLen Get(QuickFix.Fields.EncryptedNewPasswordLen val) 
@@ -364,13 +372,14 @@ namespace QuickFix
             
             public bool IsSetEncryptedNewPasswordLen() 
             { 
-                return IsSetField(Tags.EncryptedNewPasswordLen);
+                return IsSetField(QuickFix.Fields.Tags.EncryptedNewPasswordLen);
             }
+            
             public QuickFix.Fields.EncryptedNewPassword EncryptedNewPassword
             { 
                 get 
                 {
-                    QuickFix.Fields.EncryptedNewPassword val = new QuickFix.Fields.EncryptedNewPassword();
+                    var val = new QuickFix.Fields.EncryptedNewPassword();
                     GetField(val);
                     return val;
                 }
@@ -379,7 +388,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.EncryptedNewPassword val) 
             { 
-                this.EncryptedNewPassword = val;
+                EncryptedNewPassword = val;
             }
             
             public QuickFix.Fields.EncryptedNewPassword Get(QuickFix.Fields.EncryptedNewPassword val) 
@@ -395,9 +404,9 @@ namespace QuickFix
             
             public bool IsSetEncryptedNewPassword() 
             { 
-                return IsSetField(Tags.EncryptedNewPassword);
+                return IsSetField(QuickFix.Fields.Tags.EncryptedNewPassword);
             }
+            
 
-        }
     }
 }

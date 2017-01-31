@@ -1,12 +1,10 @@
 // This is a generated file.  Don't edit it directly!
 
 using QuickFix.Fields;
-namespace QuickFix
+namespace QuickFix.FIX42
 {
-    namespace FIX42 
+    public class Heartbeat : Message
     {
-        public class Heartbeat : Message
-        {
             public const string MsgType = "0";
 
             public Heartbeat() : base()
@@ -19,7 +17,7 @@ namespace QuickFix
             { 
                 get 
                 {
-                    QuickFix.Fields.TestReqID val = new QuickFix.Fields.TestReqID();
+                    var val = new QuickFix.Fields.TestReqID();
                     GetField(val);
                     return val;
                 }
@@ -28,7 +26,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.TestReqID val) 
             { 
-                this.TestReqID = val;
+                TestReqID = val;
             }
             
             public QuickFix.Fields.TestReqID Get(QuickFix.Fields.TestReqID val) 
@@ -44,9 +42,9 @@ namespace QuickFix
             
             public bool IsSetTestReqID() 
             { 
-                return IsSetField(Tags.TestReqID);
+                return IsSetField(QuickFix.Fields.Tags.TestReqID);
             }
+            
 
-        }
     }
 }

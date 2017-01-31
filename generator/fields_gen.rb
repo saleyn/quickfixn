@@ -1,10 +1,11 @@
 
 
 class FieldGen
-  def self.generate fields, fields_path, tags_path
+  def self.generate fields, fields_path, tags_path, namespace
     fields.map! {|fld| fld.merge! type_info(fld) }
-    File.open(fields_path, 'w') {|f| f.puts fields_str(fields) }
-    File.open(tags_path, 'w') {|f| f.puts tags_str(fields) }
+    pfx = namespace == '' ? '' : namespace+'.'
+    File.open(fields_path, 'w') {|f| f.puts fields_str(fields, namespace, pfx) }
+    File.open(tags_path,   'w') {|f| f.puts tags_str(fields,   namespace, pfx) }
   end
 
   def self.type_info( field )
@@ -35,13 +36,13 @@ class FieldGen
     end
   end
 
-  def self.fields_str fields
+  def self.fields_str fields, namespace, pfx
 <<HERE
 // This is a generated file.  Don't edit it directly!
 
 using System;
-
-namespace QuickFix.Fields
+#{namespace != "" ? "using QuickFix.Fields;\n\n" : ""}
+namespace QuickFix.#{pfx}Fields
 {
 #{
     fields.map{|f|
@@ -56,11 +57,11 @@ namespace QuickFix.Fields
 HERE
   end
 
-  def self.tags_str fields
+  def self.tags_str fields, namespace, pfx
 <<HERE
 using System;
 
-namespace QuickFix.Fields
+namespace QuickFix.#{pfx}Fields
 {
     /// <summary>
     /// FIX Field Tag Values
@@ -86,10 +87,8 @@ HERE
     /// </summary>/
     public sealed class #{field[:name]} : #{field[:cs_class]}
     {
-        public #{field[:name]}()
-            :base(Tags.#{field[:name]}) {}
-        public #{field[:name]}(#{field[:base_type]} val)
-            :base(Tags.#{field[:name]}, val) {}
+        public #{field[:name]}() : base(Tags.#{field[:name]}) {}
+        public #{field[:name]}(#{field[:base_type]} val) : base(Tags.#{field[:name]}, val) {}
 #{fix_values(field)}
     }
 
@@ -103,12 +102,10 @@ HERE
     /// </summary>/
     public sealed class #{field[:name]} : #{field[:cs_class]}
     {
-        public #{field[:name]}()
-            :base(Tags.#{field[:name]}) {}
-        public #{field[:name]}(#{field[:base_type]} val)
-            :base(Tags.#{field[:name]}, val) {}
+        public #{field[:name]}() : base(Tags.#{field[:name]}) {}
+        public #{field[:name]}(#{field[:base_type]} val) : base(Tags.#{field[:name]}, val) {}
         public #{field[:name]}(#{field[:base_type]} val, bool showMilliseconds)
-	    :base(Tags.#{field[:name]}, val, showMilliseconds) {}
+            : base(Tags.#{field[:name]}, val, showMilliseconds) {}
 #{fix_values(field)}
     }
 
@@ -129,11 +126,11 @@ HERE
 
 		  case fld[:base_type]
 			when 'int'
-		    "        public const int #{desc} = #{enum};"
+		    "        public const int    #{desc} = #{enum};"
 			when 'string'
 		    "        public const string #{desc} = \"#{enum}\";"
 			when 'char'
-		    "        public const char #{desc} = '#{enum}';"
+		    "        public const char   #{desc} = '#{enum}';"
 			when 'Boolean'
 				tf = (enum=='Y' ? "true;" : "false;")
 		    "        public const Boolean #{desc} = #{tf}"
@@ -145,7 +142,3 @@ HERE
   end
 
 end
-
-  
-
-

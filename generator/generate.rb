@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+
 $LOAD_PATH << File.dirname(__FILE__)
 
 require 'rubygems'
@@ -25,7 +27,13 @@ class Generator
     @fix50 = FIXDictionary.load spec('FIX50')
     @fix50sp1 = FIXDictionary.load spec('FIX50SP1')
     @fix50sp2 = FIXDictionary.load spec('FIX50SP2')
-    @src_path = File.join File.dirname(__FILE__), '..', 'QuickFIXn'
+    @fixfxcm10 = FIXDictionary.load spec('FIXFXCM10')
+    @src_path  = File.join File.dirname(__FILE__), '..', 'QuickFIXn'
+
+    @ext_path  = File.join File.dirname(__FILE__), '..', 'QuickFIXn', 'Extensions'
+    Dir.mkdir(@ext_path) unless File.exists?(@ext_path)
+    @fxcm_path = File.join @ext_path, 'FXCM'
+    Dir.mkdir(@fxcm_path) unless File.exists?(@fxcm_path)
   end
 
   def spec fixver
@@ -34,8 +42,14 @@ class Generator
     
   def generate_fields
     fields_path = File.join(@src_path, 'Fields', 'Fields.cs')
-    tags_path = File.join(@src_path, 'Fields', 'FieldTags.cs')
-    FieldGen.generate(agg_fields, fields_path, tags_path)
+    tags_path   = File.join(@src_path, 'Fields', 'FieldTags.cs')
+    FieldGen.generate(agg_fields,  fields_path, tags_path, "")
+
+    fxcm_fields = File.join(@fxcm_path,'Fields')
+    Dir.mkdir(fxcm_fields) unless File.exists?(fxcm_fields)
+    fxcm_fields_path = File.join(fxcm_fields, 'Fields.cs')
+    fxcm_tags_path   = File.join(fxcm_fields, 'FieldTags.cs')
+    FieldGen.generate(agg_fieldsx, fxcm_fields_path, fxcm_tags_path, "FXCM")
   end
 
   def agg_fields
@@ -44,6 +58,11 @@ class Generator
         @fix44.fields.keys + @fix50.fields.keys +
         @fix50sp1.fields.keys + @fix50sp2.fields.keys).uniq
     field_names.map {|fn| get_field_def(fn) }
+  end
+
+  def agg_fieldsx
+    field_names = (@fixfxcm10.fields.keys).uniq
+    field_names.map {|fn| get_field_defx(fn) }
   end
 
   def get_field_def fld_name
@@ -59,6 +78,15 @@ class Generator
       @fix40.fields[fld_name]
     )
     
+    raise "couldn't find field! #{fld}" if fld.nil?
+    fld
+  end
+
+  def get_field_defx fld_name
+    # we give priority to latest fix version
+    fld = merge_field_defs(
+      @fixfxcm10.fields[fld_name]
+    )
     raise "couldn't find field! #{fld}" if fld.nil?
     fld
   end
@@ -85,6 +113,10 @@ class Generator
     MessageGen.generate(@fix50.messages,  msgs_path, 'FIX50')
     MessageGen.generate(@fix50sp1.messages,  msgs_path, 'FIX50SP1')
     MessageGen.generate(@fix50sp2.messages,  msgs_path, 'FIX50SP2')
+
+    fxcm_msgs_path = File.join(@fxcm_path, 'Message')
+    Dir.mkdir(fxcm_msgs_path) unless File.exists?(fxcm_msgs_path)
+    MessageGen.generate(@fixfxcm10.messages, fxcm_msgs_path, 'FXCM', true)
   end
 
   def generate_csproj
@@ -97,6 +129,7 @@ class Generator
         {:version=>'FIX42', :messages=>@fix42.messages},
         {:version=>'FIX43', :messages=>@fix43.messages},
         {:version=>'FIX44', :messages=>@fix44.messages},
+        #{:version=>'FIX44', :messages=>@fixfxcm10.messages},
         {:version=>'FIX50', :messages=>@fix50.messages}
       ]
     )
@@ -112,6 +145,10 @@ class Generator
     MessageFactoryGen.generate(@fix50.messages,  msgs_path, 'FIX50')
     MessageFactoryGen.generate(@fix50sp1.messages,  msgs_path, 'FIX50SP1')
     MessageFactoryGen.generate(@fix50sp2.messages,  msgs_path, 'FIX50SP2')
+
+    fxcm_msgs_path = File.join(@fxcm_path, 'Message')
+    Dir.mkdir(fxcm_msgs_path) unless File.exists?(fxcm_msgs_path)
+    MessageFactoryGen.generate(@fixfxcm10.messages, fxcm_msgs_path, 'FXCM', true)
   end
 end
 

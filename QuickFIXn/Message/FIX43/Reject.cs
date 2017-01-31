@@ -1,12 +1,10 @@
 // This is a generated file.  Don't edit it directly!
 
 using QuickFix.Fields;
-namespace QuickFix
+namespace QuickFix.FIX43
 {
-    namespace FIX43 
+    public class Reject : Message
     {
-        public class Reject : Message
-        {
             public const string MsgType = "3";
 
             public Reject() : base()
@@ -25,7 +23,7 @@ namespace QuickFix
             { 
                 get 
                 {
-                    QuickFix.Fields.RefSeqNum val = new QuickFix.Fields.RefSeqNum();
+                    var val = new QuickFix.Fields.RefSeqNum();
                     GetField(val);
                     return val;
                 }
@@ -34,7 +32,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.RefSeqNum val) 
             { 
-                this.RefSeqNum = val;
+                RefSeqNum = val;
             }
             
             public QuickFix.Fields.RefSeqNum Get(QuickFix.Fields.RefSeqNum val) 
@@ -50,13 +48,14 @@ namespace QuickFix
             
             public bool IsSetRefSeqNum() 
             { 
-                return IsSetField(Tags.RefSeqNum);
+                return IsSetField(QuickFix.Fields.Tags.RefSeqNum);
             }
+            
             public QuickFix.Fields.RefTagID RefTagID
             { 
                 get 
                 {
-                    QuickFix.Fields.RefTagID val = new QuickFix.Fields.RefTagID();
+                    var val = new QuickFix.Fields.RefTagID();
                     GetField(val);
                     return val;
                 }
@@ -65,7 +64,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.RefTagID val) 
             { 
-                this.RefTagID = val;
+                RefTagID = val;
             }
             
             public QuickFix.Fields.RefTagID Get(QuickFix.Fields.RefTagID val) 
@@ -81,13 +80,14 @@ namespace QuickFix
             
             public bool IsSetRefTagID() 
             { 
-                return IsSetField(Tags.RefTagID);
+                return IsSetField(QuickFix.Fields.Tags.RefTagID);
             }
+            
             public QuickFix.Fields.RefMsgType RefMsgType
             { 
                 get 
                 {
-                    QuickFix.Fields.RefMsgType val = new QuickFix.Fields.RefMsgType();
+                    var val = new QuickFix.Fields.RefMsgType();
                     GetField(val);
                     return val;
                 }
@@ -96,7 +96,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.RefMsgType val) 
             { 
-                this.RefMsgType = val;
+                RefMsgType = val;
             }
             
             public QuickFix.Fields.RefMsgType Get(QuickFix.Fields.RefMsgType val) 
@@ -112,13 +112,14 @@ namespace QuickFix
             
             public bool IsSetRefMsgType() 
             { 
-                return IsSetField(Tags.RefMsgType);
+                return IsSetField(QuickFix.Fields.Tags.RefMsgType);
             }
+            
             public QuickFix.Fields.SessionRejectReason SessionRejectReason
             { 
                 get 
                 {
-                    QuickFix.Fields.SessionRejectReason val = new QuickFix.Fields.SessionRejectReason();
+                    var val = new QuickFix.Fields.SessionRejectReason();
                     GetField(val);
                     return val;
                 }
@@ -127,7 +128,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.SessionRejectReason val) 
             { 
-                this.SessionRejectReason = val;
+                SessionRejectReason = val;
             }
             
             public QuickFix.Fields.SessionRejectReason Get(QuickFix.Fields.SessionRejectReason val) 
@@ -143,13 +144,14 @@ namespace QuickFix
             
             public bool IsSetSessionRejectReason() 
             { 
-                return IsSetField(Tags.SessionRejectReason);
+                return IsSetField(QuickFix.Fields.Tags.SessionRejectReason);
             }
+            
             public QuickFix.Fields.Text Text
             { 
                 get 
                 {
-                    QuickFix.Fields.Text val = new QuickFix.Fields.Text();
+                    var val = new QuickFix.Fields.Text();
                     GetField(val);
                     return val;
                 }
@@ -158,7 +160,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.Text val) 
             { 
-                this.Text = val;
+                Text = val;
             }
             
             public QuickFix.Fields.Text Get(QuickFix.Fields.Text val) 
@@ -174,13 +176,14 @@ namespace QuickFix
             
             public bool IsSetText() 
             { 
-                return IsSetField(Tags.Text);
+                return IsSetField(QuickFix.Fields.Tags.Text);
             }
+            
             public QuickFix.Fields.EncodedTextLen EncodedTextLen
             { 
                 get 
                 {
-                    QuickFix.Fields.EncodedTextLen val = new QuickFix.Fields.EncodedTextLen();
+                    var val = new QuickFix.Fields.EncodedTextLen();
                     GetField(val);
                     return val;
                 }
@@ -189,7 +192,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.EncodedTextLen val) 
             { 
-                this.EncodedTextLen = val;
+                EncodedTextLen = val;
             }
             
             public QuickFix.Fields.EncodedTextLen Get(QuickFix.Fields.EncodedTextLen val) 
@@ -205,13 +208,14 @@ namespace QuickFix
             
             public bool IsSetEncodedTextLen() 
             { 
-                return IsSetField(Tags.EncodedTextLen);
+                return IsSetField(QuickFix.Fields.Tags.EncodedTextLen);
             }
+            
             public QuickFix.Fields.EncodedText EncodedText
             { 
                 get 
                 {
-                    QuickFix.Fields.EncodedText val = new QuickFix.Fields.EncodedText();
+                    var val = new QuickFix.Fields.EncodedText();
                     GetField(val);
                     return val;
                 }
@@ -220,7 +224,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.EncodedText val) 
             { 
-                this.EncodedText = val;
+                EncodedText = val;
             }
             
             public QuickFix.Fields.EncodedText Get(QuickFix.Fields.EncodedText val) 
@@ -236,9 +240,9 @@ namespace QuickFix
             
             public bool IsSetEncodedText() 
             { 
-                return IsSetField(Tags.EncodedText);
+                return IsSetField(QuickFix.Fields.Tags.EncodedText);
             }
+            
 
-        }
     }
 }

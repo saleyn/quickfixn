@@ -1,12 +1,10 @@
 // This is a generated file.  Don't edit it directly!
 
 using QuickFix.Fields;
-namespace QuickFix
+namespace QuickFix.FIX44
 {
-    namespace FIX44 
+    public class UserResponse : Message
     {
-        public class UserResponse : Message
-        {
             public const string MsgType = "BF";
 
             public UserResponse() : base()
@@ -27,7 +25,7 @@ namespace QuickFix
             { 
                 get 
                 {
-                    QuickFix.Fields.UserRequestID val = new QuickFix.Fields.UserRequestID();
+                    var val = new QuickFix.Fields.UserRequestID();
                     GetField(val);
                     return val;
                 }
@@ -36,7 +34,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.UserRequestID val) 
             { 
-                this.UserRequestID = val;
+                UserRequestID = val;
             }
             
             public QuickFix.Fields.UserRequestID Get(QuickFix.Fields.UserRequestID val) 
@@ -52,13 +50,14 @@ namespace QuickFix
             
             public bool IsSetUserRequestID() 
             { 
-                return IsSetField(Tags.UserRequestID);
+                return IsSetField(QuickFix.Fields.Tags.UserRequestID);
             }
+            
             public QuickFix.Fields.Username Username
             { 
                 get 
                 {
-                    QuickFix.Fields.Username val = new QuickFix.Fields.Username();
+                    var val = new QuickFix.Fields.Username();
                     GetField(val);
                     return val;
                 }
@@ -67,7 +66,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.Username val) 
             { 
-                this.Username = val;
+                Username = val;
             }
             
             public QuickFix.Fields.Username Get(QuickFix.Fields.Username val) 
@@ -83,13 +82,14 @@ namespace QuickFix
             
             public bool IsSetUsername() 
             { 
-                return IsSetField(Tags.Username);
+                return IsSetField(QuickFix.Fields.Tags.Username);
             }
+            
             public QuickFix.Fields.UserStatus UserStatus
             { 
                 get 
                 {
-                    QuickFix.Fields.UserStatus val = new QuickFix.Fields.UserStatus();
+                    var val = new QuickFix.Fields.UserStatus();
                     GetField(val);
                     return val;
                 }
@@ -98,7 +98,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.UserStatus val) 
             { 
-                this.UserStatus = val;
+                UserStatus = val;
             }
             
             public QuickFix.Fields.UserStatus Get(QuickFix.Fields.UserStatus val) 
@@ -114,13 +114,14 @@ namespace QuickFix
             
             public bool IsSetUserStatus() 
             { 
-                return IsSetField(Tags.UserStatus);
+                return IsSetField(QuickFix.Fields.Tags.UserStatus);
             }
+            
             public QuickFix.Fields.UserStatusText UserStatusText
             { 
                 get 
                 {
-                    QuickFix.Fields.UserStatusText val = new QuickFix.Fields.UserStatusText();
+                    var val = new QuickFix.Fields.UserStatusText();
                     GetField(val);
                     return val;
                 }
@@ -129,7 +130,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.UserStatusText val) 
             { 
-                this.UserStatusText = val;
+                UserStatusText = val;
             }
             
             public QuickFix.Fields.UserStatusText Get(QuickFix.Fields.UserStatusText val) 
@@ -145,9 +146,9 @@ namespace QuickFix
             
             public bool IsSetUserStatusText() 
             { 
-                return IsSetField(Tags.UserStatusText);
+                return IsSetField(QuickFix.Fields.Tags.UserStatusText);
             }
+            
 
-        }
     }
 }

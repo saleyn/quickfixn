@@ -1,12 +1,10 @@
 // This is a generated file.  Don't edit it directly!
 
 using QuickFix.Fields;
-namespace QuickFix
+namespace QuickFix.FIX41
 {
-    namespace FIX41 
+    public class Reject : Message
     {
-        public class Reject : Message
-        {
             public const string MsgType = "3";
 
             public Reject() : base()
@@ -25,7 +23,7 @@ namespace QuickFix
             { 
                 get 
                 {
-                    QuickFix.Fields.RefSeqNum val = new QuickFix.Fields.RefSeqNum();
+                    var val = new QuickFix.Fields.RefSeqNum();
                     GetField(val);
                     return val;
                 }
@@ -34,7 +32,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.RefSeqNum val) 
             { 
-                this.RefSeqNum = val;
+                RefSeqNum = val;
             }
             
             public QuickFix.Fields.RefSeqNum Get(QuickFix.Fields.RefSeqNum val) 
@@ -50,13 +48,14 @@ namespace QuickFix
             
             public bool IsSetRefSeqNum() 
             { 
-                return IsSetField(Tags.RefSeqNum);
+                return IsSetField(QuickFix.Fields.Tags.RefSeqNum);
             }
+            
             public QuickFix.Fields.Text Text
             { 
                 get 
                 {
-                    QuickFix.Fields.Text val = new QuickFix.Fields.Text();
+                    var val = new QuickFix.Fields.Text();
                     GetField(val);
                     return val;
                 }
@@ -65,7 +64,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.Text val) 
             { 
-                this.Text = val;
+                Text = val;
             }
             
             public QuickFix.Fields.Text Get(QuickFix.Fields.Text val) 
@@ -81,9 +80,9 @@ namespace QuickFix
             
             public bool IsSetText() 
             { 
-                return IsSetField(Tags.Text);
+                return IsSetField(QuickFix.Fields.Tags.Text);
             }
+            
 
-        }
     }
 }

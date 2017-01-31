@@ -1,12 +1,10 @@
 // This is a generated file.  Don't edit it directly!
 
 using QuickFix.Fields;
-namespace QuickFix
+namespace QuickFix.FIX50SP2
 {
-    namespace FIX50SP2 
+    public class ApplicationMessageReport : Message
     {
-        public class ApplicationMessageReport : Message
-        {
             public const string MsgType = "BY";
 
             public ApplicationMessageReport() : base()
@@ -27,7 +25,7 @@ namespace QuickFix
             { 
                 get 
                 {
-                    QuickFix.Fields.ApplReportID val = new QuickFix.Fields.ApplReportID();
+                    var val = new QuickFix.Fields.ApplReportID();
                     GetField(val);
                     return val;
                 }
@@ -36,7 +34,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.ApplReportID val) 
             { 
-                this.ApplReportID = val;
+                ApplReportID = val;
             }
             
             public QuickFix.Fields.ApplReportID Get(QuickFix.Fields.ApplReportID val) 
@@ -52,13 +50,14 @@ namespace QuickFix
             
             public bool IsSetApplReportID() 
             { 
-                return IsSetField(Tags.ApplReportID);
+                return IsSetField(QuickFix.Fields.Tags.ApplReportID);
             }
+            
             public QuickFix.Fields.ApplReportType ApplReportType
             { 
                 get 
                 {
-                    QuickFix.Fields.ApplReportType val = new QuickFix.Fields.ApplReportType();
+                    var val = new QuickFix.Fields.ApplReportType();
                     GetField(val);
                     return val;
                 }
@@ -67,7 +66,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.ApplReportType val) 
             { 
-                this.ApplReportType = val;
+                ApplReportType = val;
             }
             
             public QuickFix.Fields.ApplReportType Get(QuickFix.Fields.ApplReportType val) 
@@ -83,13 +82,14 @@ namespace QuickFix
             
             public bool IsSetApplReportType() 
             { 
-                return IsSetField(Tags.ApplReportType);
+                return IsSetField(QuickFix.Fields.Tags.ApplReportType);
             }
+            
             public QuickFix.Fields.NoApplIDs NoApplIDs
             { 
                 get 
                 {
-                    QuickFix.Fields.NoApplIDs val = new QuickFix.Fields.NoApplIDs();
+                    var val = new QuickFix.Fields.NoApplIDs();
                     GetField(val);
                     return val;
                 }
@@ -98,7 +98,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.NoApplIDs val) 
             { 
-                this.NoApplIDs = val;
+                NoApplIDs = val;
             }
             
             public QuickFix.Fields.NoApplIDs Get(QuickFix.Fields.NoApplIDs val) 
@@ -114,13 +114,14 @@ namespace QuickFix
             
             public bool IsSetNoApplIDs() 
             { 
-                return IsSetField(Tags.NoApplIDs);
+                return IsSetField(QuickFix.Fields.Tags.NoApplIDs);
             }
+            
             public QuickFix.Fields.Text Text
             { 
                 get 
                 {
-                    QuickFix.Fields.Text val = new QuickFix.Fields.Text();
+                    var val = new QuickFix.Fields.Text();
                     GetField(val);
                     return val;
                 }
@@ -129,7 +130,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.Text val) 
             { 
-                this.Text = val;
+                Text = val;
             }
             
             public QuickFix.Fields.Text Get(QuickFix.Fields.Text val) 
@@ -145,13 +146,14 @@ namespace QuickFix
             
             public bool IsSetText() 
             { 
-                return IsSetField(Tags.Text);
+                return IsSetField(QuickFix.Fields.Tags.Text);
             }
+            
             public QuickFix.Fields.EncodedTextLen EncodedTextLen
             { 
                 get 
                 {
-                    QuickFix.Fields.EncodedTextLen val = new QuickFix.Fields.EncodedTextLen();
+                    var val = new QuickFix.Fields.EncodedTextLen();
                     GetField(val);
                     return val;
                 }
@@ -160,7 +162,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.EncodedTextLen val) 
             { 
-                this.EncodedTextLen = val;
+                EncodedTextLen = val;
             }
             
             public QuickFix.Fields.EncodedTextLen Get(QuickFix.Fields.EncodedTextLen val) 
@@ -176,13 +178,14 @@ namespace QuickFix
             
             public bool IsSetEncodedTextLen() 
             { 
-                return IsSetField(Tags.EncodedTextLen);
+                return IsSetField(QuickFix.Fields.Tags.EncodedTextLen);
             }
+            
             public QuickFix.Fields.EncodedText EncodedText
             { 
                 get 
                 {
-                    QuickFix.Fields.EncodedText val = new QuickFix.Fields.EncodedText();
+                    var val = new QuickFix.Fields.EncodedText();
                     GetField(val);
                     return val;
                 }
@@ -191,7 +194,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.EncodedText val) 
             { 
-                this.EncodedText = val;
+                EncodedText = val;
             }
             
             public QuickFix.Fields.EncodedText Get(QuickFix.Fields.EncodedText val) 
@@ -207,13 +210,14 @@ namespace QuickFix
             
             public bool IsSetEncodedText() 
             { 
-                return IsSetField(Tags.EncodedText);
+                return IsSetField(QuickFix.Fields.Tags.EncodedText);
             }
+            
             public QuickFix.Fields.ApplReqID ApplReqID
             { 
                 get 
                 {
-                    QuickFix.Fields.ApplReqID val = new QuickFix.Fields.ApplReqID();
+                    var val = new QuickFix.Fields.ApplReqID();
                     GetField(val);
                     return val;
                 }
@@ -222,7 +226,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.ApplReqID val) 
             { 
-                this.ApplReqID = val;
+                ApplReqID = val;
             }
             
             public QuickFix.Fields.ApplReqID Get(QuickFix.Fields.ApplReqID val) 
@@ -238,14 +242,15 @@ namespace QuickFix
             
             public bool IsSetApplReqID() 
             { 
-                return IsSetField(Tags.ApplReqID);
+                return IsSetField(QuickFix.Fields.Tags.ApplReqID);
             }
+            
             public class NoApplIDsGroup : Group
             {
-                public static int[] fieldOrder = {Tags.RefApplID, Tags.ApplNewSeqNum, Tags.RefApplLastSeqNum, 0};
+                public static int[] fieldOrder = {QuickFix.Fields.Tags.RefApplID, QuickFix.Fields.Tags.ApplNewSeqNum, QuickFix.Fields.Tags.RefApplLastSeqNum, 0};
             
                 public NoApplIDsGroup() 
-                  :base( Tags.NoApplIDs, Tags.RefApplID, fieldOrder)
+                  :base( QuickFix.Fields.Tags.NoApplIDs, QuickFix.Fields.Tags.RefApplID, fieldOrder)
                 {
                 }
             
@@ -260,7 +265,7 @@ namespace QuickFix
                 { 
                     get 
                     {
-                        QuickFix.Fields.RefApplID val = new QuickFix.Fields.RefApplID();
+                        var val = new QuickFix.Fields.RefApplID();
                         GetField(val);
                         return val;
                     }
@@ -269,7 +274,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.RefApplID val) 
                 { 
-                    this.RefApplID = val;
+                    RefApplID = val;
                 }
                 
                 public QuickFix.Fields.RefApplID Get(QuickFix.Fields.RefApplID val) 
@@ -285,13 +290,14 @@ namespace QuickFix
                 
                 public bool IsSetRefApplID() 
                 { 
-                    return IsSetField(Tags.RefApplID);
+                    return IsSetField(QuickFix.Fields.Tags.RefApplID);
                 }
+                
                 public QuickFix.Fields.ApplNewSeqNum ApplNewSeqNum
                 { 
                     get 
                     {
-                        QuickFix.Fields.ApplNewSeqNum val = new QuickFix.Fields.ApplNewSeqNum();
+                        var val = new QuickFix.Fields.ApplNewSeqNum();
                         GetField(val);
                         return val;
                     }
@@ -300,7 +306,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.ApplNewSeqNum val) 
                 { 
-                    this.ApplNewSeqNum = val;
+                    ApplNewSeqNum = val;
                 }
                 
                 public QuickFix.Fields.ApplNewSeqNum Get(QuickFix.Fields.ApplNewSeqNum val) 
@@ -316,13 +322,14 @@ namespace QuickFix
                 
                 public bool IsSetApplNewSeqNum() 
                 { 
-                    return IsSetField(Tags.ApplNewSeqNum);
+                    return IsSetField(QuickFix.Fields.Tags.ApplNewSeqNum);
                 }
+                
                 public QuickFix.Fields.RefApplLastSeqNum RefApplLastSeqNum
                 { 
                     get 
                     {
-                        QuickFix.Fields.RefApplLastSeqNum val = new QuickFix.Fields.RefApplLastSeqNum();
+                        var val = new QuickFix.Fields.RefApplLastSeqNum();
                         GetField(val);
                         return val;
                     }
@@ -331,7 +338,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.RefApplLastSeqNum val) 
                 { 
-                    this.RefApplLastSeqNum = val;
+                    RefApplLastSeqNum = val;
                 }
                 
                 public QuickFix.Fields.RefApplLastSeqNum Get(QuickFix.Fields.RefApplLastSeqNum val) 
@@ -347,10 +354,10 @@ namespace QuickFix
                 
                 public bool IsSetRefApplLastSeqNum() 
                 { 
-                    return IsSetField(Tags.RefApplLastSeqNum);
+                    return IsSetField(QuickFix.Fields.Tags.RefApplLastSeqNum);
                 }
+                
             
             }
-        }
     }
 }

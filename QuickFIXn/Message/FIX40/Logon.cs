@@ -1,12 +1,10 @@
 // This is a generated file.  Don't edit it directly!
 
 using QuickFix.Fields;
-namespace QuickFix
+namespace QuickFix.FIX40
 {
-    namespace FIX40 
+    public class Logon : Message
     {
-        public class Logon : Message
-        {
             public const string MsgType = "A";
 
             public Logon() : base()
@@ -27,7 +25,7 @@ namespace QuickFix
             { 
                 get 
                 {
-                    QuickFix.Fields.EncryptMethod val = new QuickFix.Fields.EncryptMethod();
+                    var val = new QuickFix.Fields.EncryptMethod();
                     GetField(val);
                     return val;
                 }
@@ -36,7 +34,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.EncryptMethod val) 
             { 
-                this.EncryptMethod = val;
+                EncryptMethod = val;
             }
             
             public QuickFix.Fields.EncryptMethod Get(QuickFix.Fields.EncryptMethod val) 
@@ -52,13 +50,14 @@ namespace QuickFix
             
             public bool IsSetEncryptMethod() 
             { 
-                return IsSetField(Tags.EncryptMethod);
+                return IsSetField(QuickFix.Fields.Tags.EncryptMethod);
             }
+            
             public QuickFix.Fields.HeartBtInt HeartBtInt
             { 
                 get 
                 {
-                    QuickFix.Fields.HeartBtInt val = new QuickFix.Fields.HeartBtInt();
+                    var val = new QuickFix.Fields.HeartBtInt();
                     GetField(val);
                     return val;
                 }
@@ -67,7 +66,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.HeartBtInt val) 
             { 
-                this.HeartBtInt = val;
+                HeartBtInt = val;
             }
             
             public QuickFix.Fields.HeartBtInt Get(QuickFix.Fields.HeartBtInt val) 
@@ -83,13 +82,14 @@ namespace QuickFix
             
             public bool IsSetHeartBtInt() 
             { 
-                return IsSetField(Tags.HeartBtInt);
+                return IsSetField(QuickFix.Fields.Tags.HeartBtInt);
             }
+            
             public QuickFix.Fields.RawDataLength RawDataLength
             { 
                 get 
                 {
-                    QuickFix.Fields.RawDataLength val = new QuickFix.Fields.RawDataLength();
+                    var val = new QuickFix.Fields.RawDataLength();
                     GetField(val);
                     return val;
                 }
@@ -98,7 +98,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.RawDataLength val) 
             { 
-                this.RawDataLength = val;
+                RawDataLength = val;
             }
             
             public QuickFix.Fields.RawDataLength Get(QuickFix.Fields.RawDataLength val) 
@@ -114,13 +114,14 @@ namespace QuickFix
             
             public bool IsSetRawDataLength() 
             { 
-                return IsSetField(Tags.RawDataLength);
+                return IsSetField(QuickFix.Fields.Tags.RawDataLength);
             }
+            
             public QuickFix.Fields.RawData RawData
             { 
                 get 
                 {
-                    QuickFix.Fields.RawData val = new QuickFix.Fields.RawData();
+                    var val = new QuickFix.Fields.RawData();
                     GetField(val);
                     return val;
                 }
@@ -129,7 +130,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.RawData val) 
             { 
-                this.RawData = val;
+                RawData = val;
             }
             
             public QuickFix.Fields.RawData Get(QuickFix.Fields.RawData val) 
@@ -145,9 +146,9 @@ namespace QuickFix
             
             public bool IsSetRawData() 
             { 
-                return IsSetField(Tags.RawData);
+                return IsSetField(QuickFix.Fields.Tags.RawData);
             }
+            
 
-        }
     }
 }

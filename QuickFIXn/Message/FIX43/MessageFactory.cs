@@ -1,11 +1,9 @@
 // This is a generated file.  Don't edit it directly!
 
-namespace QuickFix
+namespace QuickFix.FIX43
 {
-    namespace FIX43
+    public class MessageFactory : IMessageFactory
     {
-        public class MessageFactory : IMessageFactory
-        {
             public QuickFix.Message Create(string beginString, string msgType)
             {
                 switch (msgType)
@@ -619,6 +617,5 @@ namespace QuickFix
                 return null;
             }
 
-        }
     }
 }

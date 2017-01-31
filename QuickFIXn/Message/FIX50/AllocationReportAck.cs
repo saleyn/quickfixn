@@ -1,12 +1,10 @@
 // This is a generated file.  Don't edit it directly!
 
 using QuickFix.Fields;
-namespace QuickFix
+namespace QuickFix.FIX50
 {
-    namespace FIX50 
+    public class AllocationReportAck : Message
     {
-        public class AllocationReportAck : Message
-        {
             public const string MsgType = "AT";
 
             public AllocationReportAck() : base()
@@ -27,7 +25,7 @@ namespace QuickFix
             { 
                 get 
                 {
-                    QuickFix.Fields.AllocReportID val = new QuickFix.Fields.AllocReportID();
+                    var val = new QuickFix.Fields.AllocReportID();
                     GetField(val);
                     return val;
                 }
@@ -36,7 +34,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.AllocReportID val) 
             { 
-                this.AllocReportID = val;
+                AllocReportID = val;
             }
             
             public QuickFix.Fields.AllocReportID Get(QuickFix.Fields.AllocReportID val) 
@@ -52,13 +50,14 @@ namespace QuickFix
             
             public bool IsSetAllocReportID() 
             { 
-                return IsSetField(Tags.AllocReportID);
+                return IsSetField(QuickFix.Fields.Tags.AllocReportID);
             }
+            
             public QuickFix.Fields.AllocID AllocID
             { 
                 get 
                 {
-                    QuickFix.Fields.AllocID val = new QuickFix.Fields.AllocID();
+                    var val = new QuickFix.Fields.AllocID();
                     GetField(val);
                     return val;
                 }
@@ -67,7 +66,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.AllocID val) 
             { 
-                this.AllocID = val;
+                AllocID = val;
             }
             
             public QuickFix.Fields.AllocID Get(QuickFix.Fields.AllocID val) 
@@ -83,13 +82,14 @@ namespace QuickFix
             
             public bool IsSetAllocID() 
             { 
-                return IsSetField(Tags.AllocID);
+                return IsSetField(QuickFix.Fields.Tags.AllocID);
             }
+            
             public QuickFix.Fields.NoPartyIDs NoPartyIDs
             { 
                 get 
                 {
-                    QuickFix.Fields.NoPartyIDs val = new QuickFix.Fields.NoPartyIDs();
+                    var val = new QuickFix.Fields.NoPartyIDs();
                     GetField(val);
                     return val;
                 }
@@ -98,7 +98,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.NoPartyIDs val) 
             { 
-                this.NoPartyIDs = val;
+                NoPartyIDs = val;
             }
             
             public QuickFix.Fields.NoPartyIDs Get(QuickFix.Fields.NoPartyIDs val) 
@@ -114,13 +114,14 @@ namespace QuickFix
             
             public bool IsSetNoPartyIDs() 
             { 
-                return IsSetField(Tags.NoPartyIDs);
+                return IsSetField(QuickFix.Fields.Tags.NoPartyIDs);
             }
+            
             public QuickFix.Fields.SecondaryAllocID SecondaryAllocID
             { 
                 get 
                 {
-                    QuickFix.Fields.SecondaryAllocID val = new QuickFix.Fields.SecondaryAllocID();
+                    var val = new QuickFix.Fields.SecondaryAllocID();
                     GetField(val);
                     return val;
                 }
@@ -129,7 +130,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.SecondaryAllocID val) 
             { 
-                this.SecondaryAllocID = val;
+                SecondaryAllocID = val;
             }
             
             public QuickFix.Fields.SecondaryAllocID Get(QuickFix.Fields.SecondaryAllocID val) 
@@ -145,13 +146,14 @@ namespace QuickFix
             
             public bool IsSetSecondaryAllocID() 
             { 
-                return IsSetField(Tags.SecondaryAllocID);
+                return IsSetField(QuickFix.Fields.Tags.SecondaryAllocID);
             }
+            
             public QuickFix.Fields.TradeDate TradeDate
             { 
                 get 
                 {
-                    QuickFix.Fields.TradeDate val = new QuickFix.Fields.TradeDate();
+                    var val = new QuickFix.Fields.TradeDate();
                     GetField(val);
                     return val;
                 }
@@ -160,7 +162,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.TradeDate val) 
             { 
-                this.TradeDate = val;
+                TradeDate = val;
             }
             
             public QuickFix.Fields.TradeDate Get(QuickFix.Fields.TradeDate val) 
@@ -176,13 +178,14 @@ namespace QuickFix
             
             public bool IsSetTradeDate() 
             { 
-                return IsSetField(Tags.TradeDate);
+                return IsSetField(QuickFix.Fields.Tags.TradeDate);
             }
+            
             public QuickFix.Fields.TransactTime TransactTime
             { 
                 get 
                 {
-                    QuickFix.Fields.TransactTime val = new QuickFix.Fields.TransactTime();
+                    var val = new QuickFix.Fields.TransactTime();
                     GetField(val);
                     return val;
                 }
@@ -191,7 +194,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.TransactTime val) 
             { 
-                this.TransactTime = val;
+                TransactTime = val;
             }
             
             public QuickFix.Fields.TransactTime Get(QuickFix.Fields.TransactTime val) 
@@ -207,13 +210,14 @@ namespace QuickFix
             
             public bool IsSetTransactTime() 
             { 
-                return IsSetField(Tags.TransactTime);
+                return IsSetField(QuickFix.Fields.Tags.TransactTime);
             }
+            
             public QuickFix.Fields.AllocStatus AllocStatus
             { 
                 get 
                 {
-                    QuickFix.Fields.AllocStatus val = new QuickFix.Fields.AllocStatus();
+                    var val = new QuickFix.Fields.AllocStatus();
                     GetField(val);
                     return val;
                 }
@@ -222,7 +226,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.AllocStatus val) 
             { 
-                this.AllocStatus = val;
+                AllocStatus = val;
             }
             
             public QuickFix.Fields.AllocStatus Get(QuickFix.Fields.AllocStatus val) 
@@ -238,13 +242,14 @@ namespace QuickFix
             
             public bool IsSetAllocStatus() 
             { 
-                return IsSetField(Tags.AllocStatus);
+                return IsSetField(QuickFix.Fields.Tags.AllocStatus);
             }
+            
             public QuickFix.Fields.AllocRejCode AllocRejCode
             { 
                 get 
                 {
-                    QuickFix.Fields.AllocRejCode val = new QuickFix.Fields.AllocRejCode();
+                    var val = new QuickFix.Fields.AllocRejCode();
                     GetField(val);
                     return val;
                 }
@@ -253,7 +258,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.AllocRejCode val) 
             { 
-                this.AllocRejCode = val;
+                AllocRejCode = val;
             }
             
             public QuickFix.Fields.AllocRejCode Get(QuickFix.Fields.AllocRejCode val) 
@@ -269,13 +274,14 @@ namespace QuickFix
             
             public bool IsSetAllocRejCode() 
             { 
-                return IsSetField(Tags.AllocRejCode);
+                return IsSetField(QuickFix.Fields.Tags.AllocRejCode);
             }
+            
             public QuickFix.Fields.AllocReportType AllocReportType
             { 
                 get 
                 {
-                    QuickFix.Fields.AllocReportType val = new QuickFix.Fields.AllocReportType();
+                    var val = new QuickFix.Fields.AllocReportType();
                     GetField(val);
                     return val;
                 }
@@ -284,7 +290,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.AllocReportType val) 
             { 
-                this.AllocReportType = val;
+                AllocReportType = val;
             }
             
             public QuickFix.Fields.AllocReportType Get(QuickFix.Fields.AllocReportType val) 
@@ -300,13 +306,14 @@ namespace QuickFix
             
             public bool IsSetAllocReportType() 
             { 
-                return IsSetField(Tags.AllocReportType);
+                return IsSetField(QuickFix.Fields.Tags.AllocReportType);
             }
+            
             public QuickFix.Fields.AllocIntermedReqType AllocIntermedReqType
             { 
                 get 
                 {
-                    QuickFix.Fields.AllocIntermedReqType val = new QuickFix.Fields.AllocIntermedReqType();
+                    var val = new QuickFix.Fields.AllocIntermedReqType();
                     GetField(val);
                     return val;
                 }
@@ -315,7 +322,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.AllocIntermedReqType val) 
             { 
-                this.AllocIntermedReqType = val;
+                AllocIntermedReqType = val;
             }
             
             public QuickFix.Fields.AllocIntermedReqType Get(QuickFix.Fields.AllocIntermedReqType val) 
@@ -331,13 +338,14 @@ namespace QuickFix
             
             public bool IsSetAllocIntermedReqType() 
             { 
-                return IsSetField(Tags.AllocIntermedReqType);
+                return IsSetField(QuickFix.Fields.Tags.AllocIntermedReqType);
             }
+            
             public QuickFix.Fields.MatchStatus MatchStatus
             { 
                 get 
                 {
-                    QuickFix.Fields.MatchStatus val = new QuickFix.Fields.MatchStatus();
+                    var val = new QuickFix.Fields.MatchStatus();
                     GetField(val);
                     return val;
                 }
@@ -346,7 +354,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.MatchStatus val) 
             { 
-                this.MatchStatus = val;
+                MatchStatus = val;
             }
             
             public QuickFix.Fields.MatchStatus Get(QuickFix.Fields.MatchStatus val) 
@@ -362,13 +370,14 @@ namespace QuickFix
             
             public bool IsSetMatchStatus() 
             { 
-                return IsSetField(Tags.MatchStatus);
+                return IsSetField(QuickFix.Fields.Tags.MatchStatus);
             }
+            
             public QuickFix.Fields.Product Product
             { 
                 get 
                 {
-                    QuickFix.Fields.Product val = new QuickFix.Fields.Product();
+                    var val = new QuickFix.Fields.Product();
                     GetField(val);
                     return val;
                 }
@@ -377,7 +386,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.Product val) 
             { 
-                this.Product = val;
+                Product = val;
             }
             
             public QuickFix.Fields.Product Get(QuickFix.Fields.Product val) 
@@ -393,13 +402,14 @@ namespace QuickFix
             
             public bool IsSetProduct() 
             { 
-                return IsSetField(Tags.Product);
+                return IsSetField(QuickFix.Fields.Tags.Product);
             }
+            
             public QuickFix.Fields.SecurityType SecurityType
             { 
                 get 
                 {
-                    QuickFix.Fields.SecurityType val = new QuickFix.Fields.SecurityType();
+                    var val = new QuickFix.Fields.SecurityType();
                     GetField(val);
                     return val;
                 }
@@ -408,7 +418,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.SecurityType val) 
             { 
-                this.SecurityType = val;
+                SecurityType = val;
             }
             
             public QuickFix.Fields.SecurityType Get(QuickFix.Fields.SecurityType val) 
@@ -424,13 +434,14 @@ namespace QuickFix
             
             public bool IsSetSecurityType() 
             { 
-                return IsSetField(Tags.SecurityType);
+                return IsSetField(QuickFix.Fields.Tags.SecurityType);
             }
+            
             public QuickFix.Fields.Text Text
             { 
                 get 
                 {
-                    QuickFix.Fields.Text val = new QuickFix.Fields.Text();
+                    var val = new QuickFix.Fields.Text();
                     GetField(val);
                     return val;
                 }
@@ -439,7 +450,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.Text val) 
             { 
-                this.Text = val;
+                Text = val;
             }
             
             public QuickFix.Fields.Text Get(QuickFix.Fields.Text val) 
@@ -455,13 +466,14 @@ namespace QuickFix
             
             public bool IsSetText() 
             { 
-                return IsSetField(Tags.Text);
+                return IsSetField(QuickFix.Fields.Tags.Text);
             }
+            
             public QuickFix.Fields.EncodedTextLen EncodedTextLen
             { 
                 get 
                 {
-                    QuickFix.Fields.EncodedTextLen val = new QuickFix.Fields.EncodedTextLen();
+                    var val = new QuickFix.Fields.EncodedTextLen();
                     GetField(val);
                     return val;
                 }
@@ -470,7 +482,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.EncodedTextLen val) 
             { 
-                this.EncodedTextLen = val;
+                EncodedTextLen = val;
             }
             
             public QuickFix.Fields.EncodedTextLen Get(QuickFix.Fields.EncodedTextLen val) 
@@ -486,13 +498,14 @@ namespace QuickFix
             
             public bool IsSetEncodedTextLen() 
             { 
-                return IsSetField(Tags.EncodedTextLen);
+                return IsSetField(QuickFix.Fields.Tags.EncodedTextLen);
             }
+            
             public QuickFix.Fields.EncodedText EncodedText
             { 
                 get 
                 {
-                    QuickFix.Fields.EncodedText val = new QuickFix.Fields.EncodedText();
+                    var val = new QuickFix.Fields.EncodedText();
                     GetField(val);
                     return val;
                 }
@@ -501,7 +514,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.EncodedText val) 
             { 
-                this.EncodedText = val;
+                EncodedText = val;
             }
             
             public QuickFix.Fields.EncodedText Get(QuickFix.Fields.EncodedText val) 
@@ -517,13 +530,14 @@ namespace QuickFix
             
             public bool IsSetEncodedText() 
             { 
-                return IsSetField(Tags.EncodedText);
+                return IsSetField(QuickFix.Fields.Tags.EncodedText);
             }
+            
             public QuickFix.Fields.NoAllocs NoAllocs
             { 
                 get 
                 {
-                    QuickFix.Fields.NoAllocs val = new QuickFix.Fields.NoAllocs();
+                    var val = new QuickFix.Fields.NoAllocs();
                     GetField(val);
                     return val;
                 }
@@ -532,7 +546,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.NoAllocs val) 
             { 
-                this.NoAllocs = val;
+                NoAllocs = val;
             }
             
             public QuickFix.Fields.NoAllocs Get(QuickFix.Fields.NoAllocs val) 
@@ -548,13 +562,14 @@ namespace QuickFix
             
             public bool IsSetNoAllocs() 
             { 
-                return IsSetField(Tags.NoAllocs);
+                return IsSetField(QuickFix.Fields.Tags.NoAllocs);
             }
+            
             public QuickFix.Fields.ClearingBusinessDate ClearingBusinessDate
             { 
                 get 
                 {
-                    QuickFix.Fields.ClearingBusinessDate val = new QuickFix.Fields.ClearingBusinessDate();
+                    var val = new QuickFix.Fields.ClearingBusinessDate();
                     GetField(val);
                     return val;
                 }
@@ -563,7 +578,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.ClearingBusinessDate val) 
             { 
-                this.ClearingBusinessDate = val;
+                ClearingBusinessDate = val;
             }
             
             public QuickFix.Fields.ClearingBusinessDate Get(QuickFix.Fields.ClearingBusinessDate val) 
@@ -579,13 +594,14 @@ namespace QuickFix
             
             public bool IsSetClearingBusinessDate() 
             { 
-                return IsSetField(Tags.ClearingBusinessDate);
+                return IsSetField(QuickFix.Fields.Tags.ClearingBusinessDate);
             }
+            
             public QuickFix.Fields.AvgPxIndicator AvgPxIndicator
             { 
                 get 
                 {
-                    QuickFix.Fields.AvgPxIndicator val = new QuickFix.Fields.AvgPxIndicator();
+                    var val = new QuickFix.Fields.AvgPxIndicator();
                     GetField(val);
                     return val;
                 }
@@ -594,7 +610,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.AvgPxIndicator val) 
             { 
-                this.AvgPxIndicator = val;
+                AvgPxIndicator = val;
             }
             
             public QuickFix.Fields.AvgPxIndicator Get(QuickFix.Fields.AvgPxIndicator val) 
@@ -610,13 +626,14 @@ namespace QuickFix
             
             public bool IsSetAvgPxIndicator() 
             { 
-                return IsSetField(Tags.AvgPxIndicator);
+                return IsSetField(QuickFix.Fields.Tags.AvgPxIndicator);
             }
+            
             public QuickFix.Fields.Quantity Quantity
             { 
                 get 
                 {
-                    QuickFix.Fields.Quantity val = new QuickFix.Fields.Quantity();
+                    var val = new QuickFix.Fields.Quantity();
                     GetField(val);
                     return val;
                 }
@@ -625,7 +642,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.Quantity val) 
             { 
-                this.Quantity = val;
+                Quantity = val;
             }
             
             public QuickFix.Fields.Quantity Get(QuickFix.Fields.Quantity val) 
@@ -641,13 +658,14 @@ namespace QuickFix
             
             public bool IsSetQuantity() 
             { 
-                return IsSetField(Tags.Quantity);
+                return IsSetField(QuickFix.Fields.Tags.Quantity);
             }
+            
             public QuickFix.Fields.AllocTransType AllocTransType
             { 
                 get 
                 {
-                    QuickFix.Fields.AllocTransType val = new QuickFix.Fields.AllocTransType();
+                    var val = new QuickFix.Fields.AllocTransType();
                     GetField(val);
                     return val;
                 }
@@ -656,7 +674,7 @@ namespace QuickFix
             
             public void Set(QuickFix.Fields.AllocTransType val) 
             { 
-                this.AllocTransType = val;
+                AllocTransType = val;
             }
             
             public QuickFix.Fields.AllocTransType Get(QuickFix.Fields.AllocTransType val) 
@@ -672,14 +690,15 @@ namespace QuickFix
             
             public bool IsSetAllocTransType() 
             { 
-                return IsSetField(Tags.AllocTransType);
+                return IsSetField(QuickFix.Fields.Tags.AllocTransType);
             }
+            
             public class NoPartyIDsGroup : Group
             {
-                public static int[] fieldOrder = {Tags.PartyID, Tags.PartyIDSource, Tags.PartyRole, Tags.NoPartySubIDs, 0};
+                public static int[] fieldOrder = {QuickFix.Fields.Tags.PartyID, QuickFix.Fields.Tags.PartyIDSource, QuickFix.Fields.Tags.PartyRole, QuickFix.Fields.Tags.NoPartySubIDs, 0};
             
                 public NoPartyIDsGroup() 
-                  :base( Tags.NoPartyIDs, Tags.PartyID, fieldOrder)
+                  :base( QuickFix.Fields.Tags.NoPartyIDs, QuickFix.Fields.Tags.PartyID, fieldOrder)
                 {
                 }
             
@@ -694,7 +713,7 @@ namespace QuickFix
                 { 
                     get 
                     {
-                        QuickFix.Fields.PartyID val = new QuickFix.Fields.PartyID();
+                        var val = new QuickFix.Fields.PartyID();
                         GetField(val);
                         return val;
                     }
@@ -703,7 +722,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.PartyID val) 
                 { 
-                    this.PartyID = val;
+                    PartyID = val;
                 }
                 
                 public QuickFix.Fields.PartyID Get(QuickFix.Fields.PartyID val) 
@@ -719,13 +738,14 @@ namespace QuickFix
                 
                 public bool IsSetPartyID() 
                 { 
-                    return IsSetField(Tags.PartyID);
+                    return IsSetField(QuickFix.Fields.Tags.PartyID);
                 }
+                
                 public QuickFix.Fields.PartyIDSource PartyIDSource
                 { 
                     get 
                     {
-                        QuickFix.Fields.PartyIDSource val = new QuickFix.Fields.PartyIDSource();
+                        var val = new QuickFix.Fields.PartyIDSource();
                         GetField(val);
                         return val;
                     }
@@ -734,7 +754,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.PartyIDSource val) 
                 { 
-                    this.PartyIDSource = val;
+                    PartyIDSource = val;
                 }
                 
                 public QuickFix.Fields.PartyIDSource Get(QuickFix.Fields.PartyIDSource val) 
@@ -750,13 +770,14 @@ namespace QuickFix
                 
                 public bool IsSetPartyIDSource() 
                 { 
-                    return IsSetField(Tags.PartyIDSource);
+                    return IsSetField(QuickFix.Fields.Tags.PartyIDSource);
                 }
+                
                 public QuickFix.Fields.PartyRole PartyRole
                 { 
                     get 
                     {
-                        QuickFix.Fields.PartyRole val = new QuickFix.Fields.PartyRole();
+                        var val = new QuickFix.Fields.PartyRole();
                         GetField(val);
                         return val;
                     }
@@ -765,7 +786,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.PartyRole val) 
                 { 
-                    this.PartyRole = val;
+                    PartyRole = val;
                 }
                 
                 public QuickFix.Fields.PartyRole Get(QuickFix.Fields.PartyRole val) 
@@ -781,13 +802,14 @@ namespace QuickFix
                 
                 public bool IsSetPartyRole() 
                 { 
-                    return IsSetField(Tags.PartyRole);
+                    return IsSetField(QuickFix.Fields.Tags.PartyRole);
                 }
+                
                 public QuickFix.Fields.NoPartySubIDs NoPartySubIDs
                 { 
                     get 
                     {
-                        QuickFix.Fields.NoPartySubIDs val = new QuickFix.Fields.NoPartySubIDs();
+                        var val = new QuickFix.Fields.NoPartySubIDs();
                         GetField(val);
                         return val;
                     }
@@ -796,7 +818,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.NoPartySubIDs val) 
                 { 
-                    this.NoPartySubIDs = val;
+                    NoPartySubIDs = val;
                 }
                 
                 public QuickFix.Fields.NoPartySubIDs Get(QuickFix.Fields.NoPartySubIDs val) 
@@ -812,14 +834,15 @@ namespace QuickFix
                 
                 public bool IsSetNoPartySubIDs() 
                 { 
-                    return IsSetField(Tags.NoPartySubIDs);
+                    return IsSetField(QuickFix.Fields.Tags.NoPartySubIDs);
                 }
+                
                             public class NoPartySubIDsGroup : Group
                 {
-                    public static int[] fieldOrder = {Tags.PartySubID, Tags.PartySubIDType, 0};
+                    public static int[] fieldOrder = {QuickFix.Fields.Tags.PartySubID, QuickFix.Fields.Tags.PartySubIDType, 0};
                 
                     public NoPartySubIDsGroup() 
-                      :base( Tags.NoPartySubIDs, Tags.PartySubID, fieldOrder)
+                      :base( QuickFix.Fields.Tags.NoPartySubIDs, QuickFix.Fields.Tags.PartySubID, fieldOrder)
                     {
                     }
                 
@@ -834,7 +857,7 @@ namespace QuickFix
                     { 
                         get 
                         {
-                            QuickFix.Fields.PartySubID val = new QuickFix.Fields.PartySubID();
+                            var val = new QuickFix.Fields.PartySubID();
                             GetField(val);
                             return val;
                         }
@@ -843,7 +866,7 @@ namespace QuickFix
                     
                     public void Set(QuickFix.Fields.PartySubID val) 
                     { 
-                        this.PartySubID = val;
+                        PartySubID = val;
                     }
                     
                     public QuickFix.Fields.PartySubID Get(QuickFix.Fields.PartySubID val) 
@@ -859,13 +882,14 @@ namespace QuickFix
                     
                     public bool IsSetPartySubID() 
                     { 
-                        return IsSetField(Tags.PartySubID);
+                        return IsSetField(QuickFix.Fields.Tags.PartySubID);
                     }
+                    
                     public QuickFix.Fields.PartySubIDType PartySubIDType
                     { 
                         get 
                         {
-                            QuickFix.Fields.PartySubIDType val = new QuickFix.Fields.PartySubIDType();
+                            var val = new QuickFix.Fields.PartySubIDType();
                             GetField(val);
                             return val;
                         }
@@ -874,7 +898,7 @@ namespace QuickFix
                     
                     public void Set(QuickFix.Fields.PartySubIDType val) 
                     { 
-                        this.PartySubIDType = val;
+                        PartySubIDType = val;
                     }
                     
                     public QuickFix.Fields.PartySubIDType Get(QuickFix.Fields.PartySubIDType val) 
@@ -890,17 +914,18 @@ namespace QuickFix
                     
                     public bool IsSetPartySubIDType() 
                     { 
-                        return IsSetField(Tags.PartySubIDType);
+                        return IsSetField(QuickFix.Fields.Tags.PartySubIDType);
                     }
+                    
                 
                 }
             }
             public class NoAllocsGroup : Group
             {
-                public static int[] fieldOrder = {Tags.AllocAccount, Tags.AllocAcctIDSource, Tags.AllocPrice, Tags.IndividualAllocID, Tags.IndividualAllocRejCode, Tags.AllocText, Tags.EncodedAllocTextLen, Tags.EncodedAllocText, Tags.SecondaryIndividualAllocID, Tags.AllocCustomerCapacity, Tags.IndividualAllocType, Tags.AllocQty, Tags.NoNestedPartyIDs, Tags.AllocPositionEffect, 0};
+                public static int[] fieldOrder = {QuickFix.Fields.Tags.AllocAccount, QuickFix.Fields.Tags.AllocAcctIDSource, QuickFix.Fields.Tags.AllocPrice, QuickFix.Fields.Tags.IndividualAllocID, QuickFix.Fields.Tags.IndividualAllocRejCode, QuickFix.Fields.Tags.AllocText, QuickFix.Fields.Tags.EncodedAllocTextLen, QuickFix.Fields.Tags.EncodedAllocText, QuickFix.Fields.Tags.SecondaryIndividualAllocID, QuickFix.Fields.Tags.AllocCustomerCapacity, QuickFix.Fields.Tags.IndividualAllocType, QuickFix.Fields.Tags.AllocQty, QuickFix.Fields.Tags.NoNestedPartyIDs, QuickFix.Fields.Tags.AllocPositionEffect, 0};
             
                 public NoAllocsGroup() 
-                  :base( Tags.NoAllocs, Tags.AllocAccount, fieldOrder)
+                  :base( QuickFix.Fields.Tags.NoAllocs, QuickFix.Fields.Tags.AllocAccount, fieldOrder)
                 {
                 }
             
@@ -915,7 +940,7 @@ namespace QuickFix
                 { 
                     get 
                     {
-                        QuickFix.Fields.AllocAccount val = new QuickFix.Fields.AllocAccount();
+                        var val = new QuickFix.Fields.AllocAccount();
                         GetField(val);
                         return val;
                     }
@@ -924,7 +949,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.AllocAccount val) 
                 { 
-                    this.AllocAccount = val;
+                    AllocAccount = val;
                 }
                 
                 public QuickFix.Fields.AllocAccount Get(QuickFix.Fields.AllocAccount val) 
@@ -940,13 +965,14 @@ namespace QuickFix
                 
                 public bool IsSetAllocAccount() 
                 { 
-                    return IsSetField(Tags.AllocAccount);
+                    return IsSetField(QuickFix.Fields.Tags.AllocAccount);
                 }
+                
                 public QuickFix.Fields.AllocAcctIDSource AllocAcctIDSource
                 { 
                     get 
                     {
-                        QuickFix.Fields.AllocAcctIDSource val = new QuickFix.Fields.AllocAcctIDSource();
+                        var val = new QuickFix.Fields.AllocAcctIDSource();
                         GetField(val);
                         return val;
                     }
@@ -955,7 +981,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.AllocAcctIDSource val) 
                 { 
-                    this.AllocAcctIDSource = val;
+                    AllocAcctIDSource = val;
                 }
                 
                 public QuickFix.Fields.AllocAcctIDSource Get(QuickFix.Fields.AllocAcctIDSource val) 
@@ -971,13 +997,14 @@ namespace QuickFix
                 
                 public bool IsSetAllocAcctIDSource() 
                 { 
-                    return IsSetField(Tags.AllocAcctIDSource);
+                    return IsSetField(QuickFix.Fields.Tags.AllocAcctIDSource);
                 }
+                
                 public QuickFix.Fields.AllocPrice AllocPrice
                 { 
                     get 
                     {
-                        QuickFix.Fields.AllocPrice val = new QuickFix.Fields.AllocPrice();
+                        var val = new QuickFix.Fields.AllocPrice();
                         GetField(val);
                         return val;
                     }
@@ -986,7 +1013,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.AllocPrice val) 
                 { 
-                    this.AllocPrice = val;
+                    AllocPrice = val;
                 }
                 
                 public QuickFix.Fields.AllocPrice Get(QuickFix.Fields.AllocPrice val) 
@@ -1002,13 +1029,14 @@ namespace QuickFix
                 
                 public bool IsSetAllocPrice() 
                 { 
-                    return IsSetField(Tags.AllocPrice);
+                    return IsSetField(QuickFix.Fields.Tags.AllocPrice);
                 }
+                
                 public QuickFix.Fields.IndividualAllocID IndividualAllocID
                 { 
                     get 
                     {
-                        QuickFix.Fields.IndividualAllocID val = new QuickFix.Fields.IndividualAllocID();
+                        var val = new QuickFix.Fields.IndividualAllocID();
                         GetField(val);
                         return val;
                     }
@@ -1017,7 +1045,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.IndividualAllocID val) 
                 { 
-                    this.IndividualAllocID = val;
+                    IndividualAllocID = val;
                 }
                 
                 public QuickFix.Fields.IndividualAllocID Get(QuickFix.Fields.IndividualAllocID val) 
@@ -1033,13 +1061,14 @@ namespace QuickFix
                 
                 public bool IsSetIndividualAllocID() 
                 { 
-                    return IsSetField(Tags.IndividualAllocID);
+                    return IsSetField(QuickFix.Fields.Tags.IndividualAllocID);
                 }
+                
                 public QuickFix.Fields.IndividualAllocRejCode IndividualAllocRejCode
                 { 
                     get 
                     {
-                        QuickFix.Fields.IndividualAllocRejCode val = new QuickFix.Fields.IndividualAllocRejCode();
+                        var val = new QuickFix.Fields.IndividualAllocRejCode();
                         GetField(val);
                         return val;
                     }
@@ -1048,7 +1077,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.IndividualAllocRejCode val) 
                 { 
-                    this.IndividualAllocRejCode = val;
+                    IndividualAllocRejCode = val;
                 }
                 
                 public QuickFix.Fields.IndividualAllocRejCode Get(QuickFix.Fields.IndividualAllocRejCode val) 
@@ -1064,13 +1093,14 @@ namespace QuickFix
                 
                 public bool IsSetIndividualAllocRejCode() 
                 { 
-                    return IsSetField(Tags.IndividualAllocRejCode);
+                    return IsSetField(QuickFix.Fields.Tags.IndividualAllocRejCode);
                 }
+                
                 public QuickFix.Fields.AllocText AllocText
                 { 
                     get 
                     {
-                        QuickFix.Fields.AllocText val = new QuickFix.Fields.AllocText();
+                        var val = new QuickFix.Fields.AllocText();
                         GetField(val);
                         return val;
                     }
@@ -1079,7 +1109,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.AllocText val) 
                 { 
-                    this.AllocText = val;
+                    AllocText = val;
                 }
                 
                 public QuickFix.Fields.AllocText Get(QuickFix.Fields.AllocText val) 
@@ -1095,13 +1125,14 @@ namespace QuickFix
                 
                 public bool IsSetAllocText() 
                 { 
-                    return IsSetField(Tags.AllocText);
+                    return IsSetField(QuickFix.Fields.Tags.AllocText);
                 }
+                
                 public QuickFix.Fields.EncodedAllocTextLen EncodedAllocTextLen
                 { 
                     get 
                     {
-                        QuickFix.Fields.EncodedAllocTextLen val = new QuickFix.Fields.EncodedAllocTextLen();
+                        var val = new QuickFix.Fields.EncodedAllocTextLen();
                         GetField(val);
                         return val;
                     }
@@ -1110,7 +1141,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.EncodedAllocTextLen val) 
                 { 
-                    this.EncodedAllocTextLen = val;
+                    EncodedAllocTextLen = val;
                 }
                 
                 public QuickFix.Fields.EncodedAllocTextLen Get(QuickFix.Fields.EncodedAllocTextLen val) 
@@ -1126,13 +1157,14 @@ namespace QuickFix
                 
                 public bool IsSetEncodedAllocTextLen() 
                 { 
-                    return IsSetField(Tags.EncodedAllocTextLen);
+                    return IsSetField(QuickFix.Fields.Tags.EncodedAllocTextLen);
                 }
+                
                 public QuickFix.Fields.EncodedAllocText EncodedAllocText
                 { 
                     get 
                     {
-                        QuickFix.Fields.EncodedAllocText val = new QuickFix.Fields.EncodedAllocText();
+                        var val = new QuickFix.Fields.EncodedAllocText();
                         GetField(val);
                         return val;
                     }
@@ -1141,7 +1173,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.EncodedAllocText val) 
                 { 
-                    this.EncodedAllocText = val;
+                    EncodedAllocText = val;
                 }
                 
                 public QuickFix.Fields.EncodedAllocText Get(QuickFix.Fields.EncodedAllocText val) 
@@ -1157,13 +1189,14 @@ namespace QuickFix
                 
                 public bool IsSetEncodedAllocText() 
                 { 
-                    return IsSetField(Tags.EncodedAllocText);
+                    return IsSetField(QuickFix.Fields.Tags.EncodedAllocText);
                 }
+                
                 public QuickFix.Fields.SecondaryIndividualAllocID SecondaryIndividualAllocID
                 { 
                     get 
                     {
-                        QuickFix.Fields.SecondaryIndividualAllocID val = new QuickFix.Fields.SecondaryIndividualAllocID();
+                        var val = new QuickFix.Fields.SecondaryIndividualAllocID();
                         GetField(val);
                         return val;
                     }
@@ -1172,7 +1205,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.SecondaryIndividualAllocID val) 
                 { 
-                    this.SecondaryIndividualAllocID = val;
+                    SecondaryIndividualAllocID = val;
                 }
                 
                 public QuickFix.Fields.SecondaryIndividualAllocID Get(QuickFix.Fields.SecondaryIndividualAllocID val) 
@@ -1188,13 +1221,14 @@ namespace QuickFix
                 
                 public bool IsSetSecondaryIndividualAllocID() 
                 { 
-                    return IsSetField(Tags.SecondaryIndividualAllocID);
+                    return IsSetField(QuickFix.Fields.Tags.SecondaryIndividualAllocID);
                 }
+                
                 public QuickFix.Fields.AllocCustomerCapacity AllocCustomerCapacity
                 { 
                     get 
                     {
-                        QuickFix.Fields.AllocCustomerCapacity val = new QuickFix.Fields.AllocCustomerCapacity();
+                        var val = new QuickFix.Fields.AllocCustomerCapacity();
                         GetField(val);
                         return val;
                     }
@@ -1203,7 +1237,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.AllocCustomerCapacity val) 
                 { 
-                    this.AllocCustomerCapacity = val;
+                    AllocCustomerCapacity = val;
                 }
                 
                 public QuickFix.Fields.AllocCustomerCapacity Get(QuickFix.Fields.AllocCustomerCapacity val) 
@@ -1219,13 +1253,14 @@ namespace QuickFix
                 
                 public bool IsSetAllocCustomerCapacity() 
                 { 
-                    return IsSetField(Tags.AllocCustomerCapacity);
+                    return IsSetField(QuickFix.Fields.Tags.AllocCustomerCapacity);
                 }
+                
                 public QuickFix.Fields.IndividualAllocType IndividualAllocType
                 { 
                     get 
                     {
-                        QuickFix.Fields.IndividualAllocType val = new QuickFix.Fields.IndividualAllocType();
+                        var val = new QuickFix.Fields.IndividualAllocType();
                         GetField(val);
                         return val;
                     }
@@ -1234,7 +1269,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.IndividualAllocType val) 
                 { 
-                    this.IndividualAllocType = val;
+                    IndividualAllocType = val;
                 }
                 
                 public QuickFix.Fields.IndividualAllocType Get(QuickFix.Fields.IndividualAllocType val) 
@@ -1250,13 +1285,14 @@ namespace QuickFix
                 
                 public bool IsSetIndividualAllocType() 
                 { 
-                    return IsSetField(Tags.IndividualAllocType);
+                    return IsSetField(QuickFix.Fields.Tags.IndividualAllocType);
                 }
+                
                 public QuickFix.Fields.AllocQty AllocQty
                 { 
                     get 
                     {
-                        QuickFix.Fields.AllocQty val = new QuickFix.Fields.AllocQty();
+                        var val = new QuickFix.Fields.AllocQty();
                         GetField(val);
                         return val;
                     }
@@ -1265,7 +1301,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.AllocQty val) 
                 { 
-                    this.AllocQty = val;
+                    AllocQty = val;
                 }
                 
                 public QuickFix.Fields.AllocQty Get(QuickFix.Fields.AllocQty val) 
@@ -1281,13 +1317,14 @@ namespace QuickFix
                 
                 public bool IsSetAllocQty() 
                 { 
-                    return IsSetField(Tags.AllocQty);
+                    return IsSetField(QuickFix.Fields.Tags.AllocQty);
                 }
+                
                 public QuickFix.Fields.NoNestedPartyIDs NoNestedPartyIDs
                 { 
                     get 
                     {
-                        QuickFix.Fields.NoNestedPartyIDs val = new QuickFix.Fields.NoNestedPartyIDs();
+                        var val = new QuickFix.Fields.NoNestedPartyIDs();
                         GetField(val);
                         return val;
                     }
@@ -1296,7 +1333,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.NoNestedPartyIDs val) 
                 { 
-                    this.NoNestedPartyIDs = val;
+                    NoNestedPartyIDs = val;
                 }
                 
                 public QuickFix.Fields.NoNestedPartyIDs Get(QuickFix.Fields.NoNestedPartyIDs val) 
@@ -1312,13 +1349,14 @@ namespace QuickFix
                 
                 public bool IsSetNoNestedPartyIDs() 
                 { 
-                    return IsSetField(Tags.NoNestedPartyIDs);
+                    return IsSetField(QuickFix.Fields.Tags.NoNestedPartyIDs);
                 }
+                
                 public QuickFix.Fields.AllocPositionEffect AllocPositionEffect
                 { 
                     get 
                     {
-                        QuickFix.Fields.AllocPositionEffect val = new QuickFix.Fields.AllocPositionEffect();
+                        var val = new QuickFix.Fields.AllocPositionEffect();
                         GetField(val);
                         return val;
                     }
@@ -1327,7 +1365,7 @@ namespace QuickFix
                 
                 public void Set(QuickFix.Fields.AllocPositionEffect val) 
                 { 
-                    this.AllocPositionEffect = val;
+                    AllocPositionEffect = val;
                 }
                 
                 public QuickFix.Fields.AllocPositionEffect Get(QuickFix.Fields.AllocPositionEffect val) 
@@ -1343,14 +1381,15 @@ namespace QuickFix
                 
                 public bool IsSetAllocPositionEffect() 
                 { 
-                    return IsSetField(Tags.AllocPositionEffect);
+                    return IsSetField(QuickFix.Fields.Tags.AllocPositionEffect);
                 }
+                
                             public class NoNestedPartyIDsGroup : Group
                 {
-                    public static int[] fieldOrder = {Tags.NestedPartyID, Tags.NestedPartyIDSource, Tags.NestedPartyRole, Tags.NoNestedPartySubIDs, 0};
+                    public static int[] fieldOrder = {QuickFix.Fields.Tags.NestedPartyID, QuickFix.Fields.Tags.NestedPartyIDSource, QuickFix.Fields.Tags.NestedPartyRole, QuickFix.Fields.Tags.NoNestedPartySubIDs, 0};
                 
                     public NoNestedPartyIDsGroup() 
-                      :base( Tags.NoNestedPartyIDs, Tags.NestedPartyID, fieldOrder)
+                      :base( QuickFix.Fields.Tags.NoNestedPartyIDs, QuickFix.Fields.Tags.NestedPartyID, fieldOrder)
                     {
                     }
                 
@@ -1365,7 +1404,7 @@ namespace QuickFix
                     { 
                         get 
                         {
-                            QuickFix.Fields.NestedPartyID val = new QuickFix.Fields.NestedPartyID();
+                            var val = new QuickFix.Fields.NestedPartyID();
                             GetField(val);
                             return val;
                         }
@@ -1374,7 +1413,7 @@ namespace QuickFix
                     
                     public void Set(QuickFix.Fields.NestedPartyID val) 
                     { 
-                        this.NestedPartyID = val;
+                        NestedPartyID = val;
                     }
                     
                     public QuickFix.Fields.NestedPartyID Get(QuickFix.Fields.NestedPartyID val) 
@@ -1390,13 +1429,14 @@ namespace QuickFix
                     
                     public bool IsSetNestedPartyID() 
                     { 
-                        return IsSetField(Tags.NestedPartyID);
+                        return IsSetField(QuickFix.Fields.Tags.NestedPartyID);
                     }
+                    
                     public QuickFix.Fields.NestedPartyIDSource NestedPartyIDSource
                     { 
                         get 
                         {
-                            QuickFix.Fields.NestedPartyIDSource val = new QuickFix.Fields.NestedPartyIDSource();
+                            var val = new QuickFix.Fields.NestedPartyIDSource();
                             GetField(val);
                             return val;
                         }
@@ -1405,7 +1445,7 @@ namespace QuickFix
                     
                     public void Set(QuickFix.Fields.NestedPartyIDSource val) 
                     { 
-                        this.NestedPartyIDSource = val;
+                        NestedPartyIDSource = val;
                     }
                     
                     public QuickFix.Fields.NestedPartyIDSource Get(QuickFix.Fields.NestedPartyIDSource val) 
@@ -1421,13 +1461,14 @@ namespace QuickFix
                     
                     public bool IsSetNestedPartyIDSource() 
                     { 
-                        return IsSetField(Tags.NestedPartyIDSource);
+                        return IsSetField(QuickFix.Fields.Tags.NestedPartyIDSource);
                     }
+                    
                     public QuickFix.Fields.NestedPartyRole NestedPartyRole
                     { 
                         get 
                         {
-                            QuickFix.Fields.NestedPartyRole val = new QuickFix.Fields.NestedPartyRole();
+                            var val = new QuickFix.Fields.NestedPartyRole();
                             GetField(val);
                             return val;
                         }
@@ -1436,7 +1477,7 @@ namespace QuickFix
                     
                     public void Set(QuickFix.Fields.NestedPartyRole val) 
                     { 
-                        this.NestedPartyRole = val;
+                        NestedPartyRole = val;
                     }
                     
                     public QuickFix.Fields.NestedPartyRole Get(QuickFix.Fields.NestedPartyRole val) 
@@ -1452,13 +1493,14 @@ namespace QuickFix
                     
                     public bool IsSetNestedPartyRole() 
                     { 
-                        return IsSetField(Tags.NestedPartyRole);
+                        return IsSetField(QuickFix.Fields.Tags.NestedPartyRole);
                     }
+                    
                     public QuickFix.Fields.NoNestedPartySubIDs NoNestedPartySubIDs
                     { 
                         get 
                         {
-                            QuickFix.Fields.NoNestedPartySubIDs val = new QuickFix.Fields.NoNestedPartySubIDs();
+                            var val = new QuickFix.Fields.NoNestedPartySubIDs();
                             GetField(val);
                             return val;
                         }
@@ -1467,7 +1509,7 @@ namespace QuickFix
                     
                     public void Set(QuickFix.Fields.NoNestedPartySubIDs val) 
                     { 
-                        this.NoNestedPartySubIDs = val;
+                        NoNestedPartySubIDs = val;
                     }
                     
                     public QuickFix.Fields.NoNestedPartySubIDs Get(QuickFix.Fields.NoNestedPartySubIDs val) 
@@ -1483,14 +1525,15 @@ namespace QuickFix
                     
                     public bool IsSetNoNestedPartySubIDs() 
                     { 
-                        return IsSetField(Tags.NoNestedPartySubIDs);
+                        return IsSetField(QuickFix.Fields.Tags.NoNestedPartySubIDs);
                     }
+                    
                                     public class NoNestedPartySubIDsGroup : Group
                     {
-                        public static int[] fieldOrder = {Tags.NestedPartySubID, Tags.NestedPartySubIDType, 0};
+                        public static int[] fieldOrder = {QuickFix.Fields.Tags.NestedPartySubID, QuickFix.Fields.Tags.NestedPartySubIDType, 0};
                     
                         public NoNestedPartySubIDsGroup() 
-                          :base( Tags.NoNestedPartySubIDs, Tags.NestedPartySubID, fieldOrder)
+                          :base( QuickFix.Fields.Tags.NoNestedPartySubIDs, QuickFix.Fields.Tags.NestedPartySubID, fieldOrder)
                         {
                         }
                     
@@ -1505,7 +1548,7 @@ namespace QuickFix
                         { 
                             get 
                             {
-                                QuickFix.Fields.NestedPartySubID val = new QuickFix.Fields.NestedPartySubID();
+                                var val = new QuickFix.Fields.NestedPartySubID();
                                 GetField(val);
                                 return val;
                             }
@@ -1514,7 +1557,7 @@ namespace QuickFix
                         
                         public void Set(QuickFix.Fields.NestedPartySubID val) 
                         { 
-                            this.NestedPartySubID = val;
+                            NestedPartySubID = val;
                         }
                         
                         public QuickFix.Fields.NestedPartySubID Get(QuickFix.Fields.NestedPartySubID val) 
@@ -1530,13 +1573,14 @@ namespace QuickFix
                         
                         public bool IsSetNestedPartySubID() 
                         { 
-                            return IsSetField(Tags.NestedPartySubID);
+                            return IsSetField(QuickFix.Fields.Tags.NestedPartySubID);
                         }
+                        
                         public QuickFix.Fields.NestedPartySubIDType NestedPartySubIDType
                         { 
                             get 
                             {
-                                QuickFix.Fields.NestedPartySubIDType val = new QuickFix.Fields.NestedPartySubIDType();
+                                var val = new QuickFix.Fields.NestedPartySubIDType();
                                 GetField(val);
                                 return val;
                             }
@@ -1545,7 +1589,7 @@ namespace QuickFix
                         
                         public void Set(QuickFix.Fields.NestedPartySubIDType val) 
                         { 
-                            this.NestedPartySubIDType = val;
+                            NestedPartySubIDType = val;
                         }
                         
                         public QuickFix.Fields.NestedPartySubIDType Get(QuickFix.Fields.NestedPartySubIDType val) 
@@ -1561,12 +1605,12 @@ namespace QuickFix
                         
                         public bool IsSetNestedPartySubIDType() 
                         { 
-                            return IsSetField(Tags.NestedPartySubIDType);
+                            return IsSetField(QuickFix.Fields.Tags.NestedPartySubIDType);
                         }
+                        
                     
                     }
                 }
             }
-        }
     }
 }

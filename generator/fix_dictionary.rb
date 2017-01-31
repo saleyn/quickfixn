@@ -47,9 +47,17 @@ class FIXDictionary
   def load_fields
     @fields = {}
     @doc.xpath( '//fields/field' ).each { |field| add_field( field ) }
+    # Add extra fields that are defined like: <field name="Ccy" as="Currency" .../>
+    @doc.xpath( '//field[@as != ""]' ).each { |field| add_extra_field( @fields[field['as']], field['name']) }
     @fields
   end
     
+  def add_extra_field(field, name)
+    fld = field.clone
+    fld[:name] = name
+    @fields[name] = fld
+  end
+
   def add_field(fld_el)
     fld_name = fld_el['name']
     fld = { :fldtype=>fld_el['type'], :name=>fld_name, :tag=>fld_el['number'].to_i }
@@ -88,16 +96,17 @@ class FIXDictionary
       cname = child['name']
       req = child['required'] == 'Y' ? true : false
       req = (req and !override_req)
-      
+      tp  = child['as'].nil? ? cname : child['as']
+
       case child.node_name
         when 'field'
-          raise "field not found! #{cname}" unless @fields.include?(cname)
-          fixel[:fields] << @fields[cname].merge(:required=>req, :group=>false)
+          raise "field not found! #{tp}" unless @fields.include?(tp)
+          fixel[:fields] << @fields[tp].merge(:required=>req, :field=>tp, :name=>cname, :group=>false)
       
         when 'group'
-          grpfld = @fields[cname].merge(:required=>req, :group=>true)
+          grpfld = @fields[tp].merge(:required=>req, :field=>tp, :name=>cname, :group=>true)
           fixel[:fields] << grpfld
-          grp = {:group_field=>grpfld, :name=>cname, :fields=>[], :groups=>[], :required=>req}
+          grp = {:group_field=>grpfld, :name=>cname, :field=>tp, :fields=>[], :groups=>[], :required=>req}
           parse_element(child, grp, header, trailer, override_req )
           fixel[:groups] << grp
           
