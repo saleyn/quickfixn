@@ -6,6 +6,7 @@ UnitTests/obj/*
 PerformanceTests/bin/*
 PerformanceTests/obj/*
 *.user
+.vs
 UnitTests/TestResult.xml
 QuickFIXn.sln.cache
 ChangeLog

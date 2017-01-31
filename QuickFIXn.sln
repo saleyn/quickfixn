@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickFix", "QuickFIXn\QuickFix.csproj", "{D67079DA-6C49-48B2-93AB-1C3E879F5A0B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{186A72D8-5A70-4DD0-BABF-E3BB3BA9F419}"
@@ -12,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples.Executor", "Examples\Executor\Examples.Executor.csproj", "{ADF1BD8E-6149-4D77-89E0-B2B775248139}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples.SimpleAcceptor", "Examples\SimpleAcceptor\Examples.SimpleAcceptor.csproj", "{59FC3768-2D8E-4CD2-88B8-C3972BA3ACA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FXCMQuickFixMessages", "Extensions\FXCM\FXCMQuickFixMessages.csproj", "{1326716C-58E7-4FD5-87FC-293000B896BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,10 @@ Global
 		{59FC3768-2D8E-4CD2-88B8-C3972BA3ACA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59FC3768-2D8E-4CD2-88B8-C3972BA3ACA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59FC3768-2D8E-4CD2-88B8-C3972BA3ACA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1326716C-58E7-4FD5-87FC-293000B896BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1326716C-58E7-4FD5-87FC-293000B896BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1326716C-58E7-4FD5-87FC-293000B896BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1326716C-58E7-4FD5-87FC-293000B896BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

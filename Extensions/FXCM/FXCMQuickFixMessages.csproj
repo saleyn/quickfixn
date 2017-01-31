@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1326716C-58E7-4FD5-87FC-293000B896BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuickFix</RootNamespace>
+    <AssemblyName>QuickFix.Messages.FXCM</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\QuickFIXn\bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\..\QuickFIXn\obj\$(Configuration)</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\QuickFIXn\bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\..\QuickFIXn\obj\$(Configuration)</IntermediateOutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fields\Fields.cs" />
+    <Compile Include="Fields\FieldTags.cs" />
+    <Compile Include="Message\Advertisement.cs" />
+    <Compile Include="Message\AllocationInstruction.cs" />
+    <Compile Include="Message\AllocationInstructionAck.cs" />
+    <Compile Include="Message\AllocationReport.cs" />
+    <Compile Include="Message\AllocationReportAck.cs" />
+    <Compile Include="Message\AssignmentReport.cs" />
+    <Compile Include="Message\BidRequest.cs" />
+    <Compile Include="Message\BidResponse.cs" />
+    <Compile Include="Message\BusinessMessageReject.cs" />
+    <Compile Include="Message\CollateralAssignment.cs" />
+    <Compile Include="Message\CollateralInquiry.cs" />
+    <Compile Include="Message\CollateralInquiryAck.cs" />
+    <Compile Include="Message\CollateralReport.cs" />
+    <Compile Include="Message\CollateralRequest.cs" />
+    <Compile Include="Message\CollateralResponse.cs" />
+    <Compile Include="Message\Confirmation.cs" />
+    <Compile Include="Message\ConfirmationAck.cs" />
+    <Compile Include="Message\ConfirmationRequest.cs" />
+    <Compile Include="Message\CrossOrderCancelReplaceRequest.cs" />
+    <Compile Include="Message\CrossOrderCancelRequest.cs" />
+    <Compile Include="Message\DerivativeSecurityList.cs" />
+    <Compile Include="Message\DerivativeSecurityListRequest.cs" />
+    <Compile Include="Message\DontKnowTrade.cs" />
+    <Compile Include="Message\Email.cs" />
+    <Compile Include="Message\ExecutionReport.cs" />
+    <Compile Include="Message\FXCMNewsRequest.cs" />
+    <Compile Include="Message\FXCMNewsTopicRequest.cs" />
+    <Compile Include="Message\FXCMNewsTopicResponse.cs" />
+    <Compile Include="Message\FXCMRequestReject.cs" />
+    <Compile Include="Message\Heartbeat.cs" />
+    <Compile Include="Message\IndicationOfInterest.cs" />
+    <Compile Include="Message\ListCancelRequest.cs" />
+    <Compile Include="Message\ListExecute.cs" />
+    <Compile Include="Message\ListStatus.cs" />
+    <Compile Include="Message\ListStatusRequest.cs" />
+    <Compile Include="Message\ListStrikePrice.cs" />
+    <Compile Include="Message\Logon.cs" />
+    <Compile Include="Message\Logout.cs" />
+    <Compile Include="Message\MarketDataIncrementalRefresh.cs" />
+    <Compile Include="Message\MarketDataRequest.cs" />
+    <Compile Include="Message\MarketDataRequestReject.cs" />
+    <Compile Include="Message\MarketDataSnapshotFullRefresh.cs" />
+    <Compile Include="Message\MassQuote.cs" />
+    <Compile Include="Message\MassQuoteAcknowledgement.cs" />
+    <Compile Include="Message\MessageFactory.cs" />
+    <Compile Include="Message\MultilegOrderCancelReplaceRequest.cs" />
+    <Compile Include="Message\NetworkStatusRequest.cs" />
+    <Compile Include="Message\NetworkStatusResponse.cs" />
+    <Compile Include="Message\NewOrderCross.cs" />
+    <Compile Include="Message\NewOrderList.cs" />
+    <Compile Include="Message\NewOrderMultileg.cs" />
+    <Compile Include="Message\NewOrderSingle.cs" />
+    <Compile Include="Message\News.cs" />
+    <Compile Include="Message\OrderCancelReject.cs" />
+    <Compile Include="Message\OrderCancelReplaceRequest.cs" />
+    <Compile Include="Message\OrderCancelRequest.cs" />
+    <Compile Include="Message\OrderMassCancelReport.cs" />
+    <Compile Include="Message\OrderMassCancelRequest.cs" />
+    <Compile Include="Message\OrderMassStatusRequest.cs" />
+    <Compile Include="Message\OrderStatusRequest.cs" />
+    <Compile Include="Message\PositionMaintenanceReport.cs" />
+    <Compile Include="Message\PositionMaintenanceRequest.cs" />
+    <Compile Include="Message\PositionReport.cs" />
+    <Compile Include="Message\Quote.cs" />
+    <Compile Include="Message\QuoteCancel.cs" />
+    <Compile Include="Message\QuoteRequest.cs" />
+    <Compile Include="Message\QuoteRequestReject.cs" />
+    <Compile Include="Message\QuoteResponse.cs" />
+    <Compile Include="Message\QuoteStatusReport.cs" />
+    <Compile Include="Message\QuoteStatusRequest.cs" />
+    <Compile Include="Message\RegistrationInstructions.cs" />
+    <Compile Include="Message\RegistrationInstructionsResponse.cs" />
+    <Compile Include="Message\Reject.cs" />
+    <Compile Include="Message\RequestForPositions.cs" />
+    <Compile Include="Message\RequestForPositionsAck.cs" />
+    <Compile Include="Message\ResendRequest.cs" />
+    <Compile Include="Message\RFQRequest.cs" />
+    <Compile Include="Message\SecurityDefinition.cs" />
+    <Compile Include="Message\SecurityDefinitionRequest.cs" />
+    <Compile Include="Message\SecurityList.cs" />
+    <Compile Include="Message\SecurityListRequest.cs" />
+    <Compile Include="Message\SecurityStatus.cs" />
+    <Compile Include="Message\SecurityStatusRequest.cs" />
+    <Compile Include="Message\SecurityTypeRequest.cs" />
+    <Compile Include="Message\SecurityTypes.cs" />
+    <Compile Include="Message\SequenceReset.cs" />
+    <Compile Include="Message\SettlementInstructionRequest.cs" />
+    <Compile Include="Message\SettlementInstructions.cs" />
+    <Compile Include="Message\TestRequest.cs" />
+    <Compile Include="Message\TradeCaptureReport.cs" />
+    <Compile Include="Message\TradeCaptureReportAck.cs" />
+    <Compile Include="Message\TradeCaptureReportRequest.cs" />
+    <Compile Include="Message\TradeCaptureReportRequestAck.cs" />
+    <Compile Include="Message\TradingSessionStatus.cs" />
+    <Compile Include="Message\TradingSessionStatusRequest.cs" />
+    <Compile Include="Message\UserRequest.cs" />
+    <Compile Include="Message\UserResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\QuickFIXn\QuickFix.csproj">
+      <Project>{d67079da-6c49-48b2-93ab-1c3e879f5a0b}</Project>
+      <Name>QuickFix</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

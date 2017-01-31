@@ -30,7 +30,7 @@ class Generator
     @fixfxcm10 = FIXDictionary.load spec('FIXFXCM10')
     @src_path  = File.join File.dirname(__FILE__), '..', 'QuickFIXn'
 
-    @ext_path  = File.join File.dirname(__FILE__), '..', 'QuickFIXn', 'Extensions'
+    @ext_path  = File.join File.dirname(__FILE__), '..', 'Extensions'
     Dir.mkdir(@ext_path) unless File.exists?(@ext_path)
     @fxcm_path = File.join @ext_path, 'FXCM'
     Dir.mkdir(@fxcm_path) unless File.exists?(@fxcm_path)
